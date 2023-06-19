@@ -64,19 +64,19 @@ body {
   transform: translateY(0) scale(1.2);
 }
 .img1 {
-  left: 22px;
-  top: 164px;
-  width: 340px;
+  left: -15px;
+  top: 120px;
+  width: 420px;
 }
 .img2 {
-  left: -46px;
-  top: 174px;
-  width: 444px;
+  left: -32px;
+  top: 100px;
+  width: 470px;
 }
 .img3 {
-  left: -16px;
+  left: -26px;
   top: 144px;
-  width: 466px;
+  width: 450px;
 }
 .divider {
   background-color: #ca6060;
