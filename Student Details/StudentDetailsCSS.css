@@ -14,6 +14,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 280px;
+  margin: 30px;
 }
 .container {
   border-radius: 50%;
@@ -96,13 +97,20 @@ body {
   font-weight: 600;
   margin-top: 16px;
   text-align: center;
+  display: none;
 }
+
 .title {
   color: #6e6e6e;
   font-family: arial;
-  font-size: 14px;
+  font-size: 18px;
   font-style: italic;
-  margin-top: 4px;
+  margin-top: 8px;
+  display: none;
 }
 
+.person:hover .name,
+.person:hover .title {
+  display: block;
+}
 
