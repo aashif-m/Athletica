@@ -93,14 +93,14 @@ body {
 }
 .name {
   color: #404245;
-  font-size: 36px;
+  font-size: 34px;
   font-weight: 600;
   margin-top: 16px;
   text-align: center;
   display: none;
 }
 
-.title {
+.role {
   color: #6e6e6e;
   font-family: arial;
   font-size: 18px;
@@ -110,7 +110,7 @@ body {
 }
 
 .person:hover .name,
-.person:hover .title {
+.person:hover .role {
   display: block;
 }
 
