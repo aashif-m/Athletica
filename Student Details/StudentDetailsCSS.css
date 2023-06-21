@@ -109,8 +109,18 @@ body {
   display: none;
 }
 
+.UOW {
+  color: #6e6e6e;
+  font-family: arial;
+  font-size: 18px;
+  font-style: italic;
+  margin-top: 4px;
+  display: none;
+}
+
 .person:hover .name,
-.person:hover .role {
+.person:hover .role,
+.person:hover .UOW {
   display: block;
 }
 
