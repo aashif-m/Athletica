@@ -116,11 +116,13 @@ body {
   font-style: italic;
   margin-top: 4px;
   display: none;
+  transition: 20s;
 }
 
 .person:hover .name,
 .person:hover .role,
 .person:hover .UOW {
   display: block;
+  transition: 20s;
 }
 
