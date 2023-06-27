@@ -27,7 +27,7 @@ header {
 	border:3px inset rgb(224, 224, 218);
 	border-radius:5px;
 	
-	background-image: url("C:\Users\HP\Desktop\images.jpeg");
+	background-image: url("NaviBarBackground.jpeg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	display: flex;
@@ -81,7 +81,7 @@ button:hover {
 /* ---------- Main Page Styling ---------- */
 
 body.homeBody {
-	background-image:url("abstract-digital-grid-black-background_53876-97647.avif");
+	background-image:url("PageBackground.avif");
 	background-size:cover;
 	background-repeat:no-repeat;
 }
