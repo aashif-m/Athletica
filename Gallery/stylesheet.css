@@ -1,0 +1,26 @@
+h1{
+    text-align: center;
+    font-size: 40px;
+   
+}
+.studentedit{
+    border: solid;
+    text-align: left;
+    font-size: 20px;
+    color: gray;
+    border-style:ridge;
+    border-color: black;
+    display: inline;
+    padding: 5px;
+}
+
+body{
+    background-image:url(backg1.jpg);
+    color: black;
+
+}
+li{
+    font-family: fantasy;
+    display: inline;
+    padding: 120px;
+}
