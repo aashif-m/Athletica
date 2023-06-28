@@ -1,7 +1,7 @@
 h1{
+    
     text-align: center;
     font-size: 40px;
-   
 }
 .studentedit{
     border: solid;
@@ -10,12 +10,13 @@ h1{
     color: gray;
     border-style:ridge;
     border-color: black;
-    display: inline;
-    padding: 5px;
+    display: inline block;
+    padding: 10px;
+    
 }
 
 body{
-    background-image:url(backg1.jpg);
+    background-color:white;
     color: black;
 
 }
@@ -23,4 +24,8 @@ li{
     font-family: fantasy;
     display: inline;
     padding: 120px;
+}
+.hoverEff:hover{
+    opacity: 0.6;
+
 }
