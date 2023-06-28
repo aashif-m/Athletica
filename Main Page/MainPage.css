@@ -81,7 +81,7 @@ button:hover {
 /* ---------- Main Page Styling ---------- */
 
 body.homeBody {
-	background-image:url("PageBackground.avif");
+	background-image:url("PageBackground.png");
 	background-size:cover;
 	background-repeat:no-repeat;
 }
