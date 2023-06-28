@@ -23,7 +23,8 @@ body{
 li{
     font-family: fantasy;
     display: inline;
-    padding: 120px;
+    margin-left: 80px;
+    margin-right: 160px;
 }
 .hoverEff:hover{
     opacity: 0.6;
