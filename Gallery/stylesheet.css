@@ -7,7 +7,7 @@ h1{
     border: solid;
     text-align: left;
     font-size: 20px;
-    color: gray;
+    color: darkcyan;
     border-style:ridge;
     border-color: black;
     display: inline block;
@@ -17,7 +17,7 @@ h1{
 
 body{
     background-color:white;
-    color: black;
+    transition: background-color 0.5s, color 0.5s;
 
 }
 li{
@@ -28,5 +28,25 @@ li{
 }
 .hoverEff:hover{
     opacity: 0.6;
+}
+
+#click {
+    position: absolute;
+    top: 10px;
+     right: 10px;
+}
+.button {
+    background-color: lightgray;
+    border-radius: 12px;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    cursor: pointer;
 
 }
+.button1:hover {
+    background-color: gray;
+    color: white;
+  }
+  
+        
+
