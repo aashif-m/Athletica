@@ -1,0 +1,39 @@
+h1{
+    font-size: 5.4rem;
+    color: #56a5eb;
+    margin-bottom: 5rem;
+    text-align: center;
+}
+
+.Instructions{
+    max-width: 700px;
+    margin: 0 auto;
+    margin-top: 50px;
+    line-height: 1.6;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0.2, 0, 0, 0.5);
+    text-align: center;
+}
+
+form{
+    border-radius: 15px;
+	width: 380px;
+	margin: 48px auto;
+	padding: 48px 32px 32px 32px;
+	background: #17c1c1;
+	border: 1px solid #ebebeb;
+	box-shadow: rgba(0,0,0,0.14902) 0px 1px 1px 0px,rgba(0,0,0,0.09804) 0px 1px 2px 0px;
+}
+
+label {
+	color: black; 
+	font-size: 25px;
+	font-weight: normal;
+	position: absolute;
+	pointer-events: none;
+	left: 5px;
+	top: 12px;
+	transition: all 0.2s ease;
+}
