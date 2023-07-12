@@ -1,0 +1,34 @@
+*{
+    margin: 0; padding: 0; border: 0; box-sizing: border-box;
+
+}
+
+.container{
+
+ min-height: 100vh;
+    
+}
+.topdiv{
+    height: 40vh;
+    background-image:url("PageBackground.png");
+	background-size: cover;
+
+}
+.bottomdiv{
+    display: flex;
+    height: 60vh;
+    background-color: lightblue;
+    
+}
+h1{
+    color: white;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 50px;
+    
+}
+.marginL{
+    margin-left: 100px;
+}
+
+
