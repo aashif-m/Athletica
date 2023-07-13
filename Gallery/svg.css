@@ -30,5 +30,17 @@ h1{
 .marginL{
     margin-left: 100px;
 }
+rect {
+    fill: blue !important;
+    stroke: black;
+    stroke-width: 5;
+    opacity: 1;
+  }
 
+  rect:hover {
+    opacity: 0.6;
+  }
+.hovereff:hover{
+    fill: aqua !important;
 
+}
