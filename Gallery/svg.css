@@ -31,16 +31,34 @@ h1{
     margin-left: 100px;
 }
 rect {
-    fill: blue !important;
+    fill: blue ;
     stroke: black;
     stroke-width: 5;
     opacity: 1;
+    transition: fill 0.3s;
   }
 
-  rect:hover {
+rect:hover,
+.hoverEff:hover rect {
     opacity: 0.6;
-  }
-.hovereff:hover{
-    fill: aqua !important;
-
+    fill: aqua;
+    
 }
+.hoverEff:hover .svgText {
+    fill: black;
+}
+
+.svgText{
+    fill:white;
+    font-size:24px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    transition: fill 0.3s ;
+}
+.lineDes{
+    fill:none;
+    stroke: black;
+    stroke-width: 10px;
+    stroke-linecap:round;
+}
+
