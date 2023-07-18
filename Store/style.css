@@ -1,0 +1,48 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.product {
+    width: 300px;
+    border: 1px solid #ccc;
+    display: inline-flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 10px;
+  }
+  
+  
+  
+  .product img {
+    width: 100%;
+    height: 75%;
+    object-fit: cover;
+
+  }
+  
+  .product .info {
+    text-align: center;
+    width: 100%;
+    height: 25%;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  
+  .product .info h3 {
+    font-size: 20px;
+  }
+  
+  .product .info .price {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+  
+  .product .info button {
+    width: 100%;
+    height: 50px;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    font-size: 16px;
+  }
+  
