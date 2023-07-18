@@ -7,11 +7,14 @@ body{
     border: 1px solid #ccc;
     display: inline-flex;
     flex-direction: column;
+    transition: transform .2s;
     flex-wrap: wrap;
     margin: 10px;
   }
-  
-  
+    
+  .product:hover{
+    transform: scale(1.1);
+  }
   
   .product img {
     width: 100%;
