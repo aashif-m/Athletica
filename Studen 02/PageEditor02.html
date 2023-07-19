@@ -28,6 +28,20 @@
 				margin-left:10%;
 				margin-right:10%;
 			}
+
+
+            .back_button {
+                border: none;
+                outline: none;
+                background: linear-gradient(50deg,#DF7104, #201e1e);
+                padding: 0.3rem 0.3rem;
+                border-radius: 20px;
+                color:wheat;
+                font-size: 1.0rem;
+                box-shadow: 1px 10px 2rem rgba(90, 63, 64, 0.5);
+                transition: all .2s ease-in;
+                text-decoration: none;
+            }
 			
 			
 			
@@ -44,7 +58,7 @@
 			}
 			
 			img.Ishrath:hover {
-				transition:1.75s;
+				transition:1.35s;
 				transform:scale(1.125);
 			}
 			
@@ -55,10 +69,13 @@
 				border-radius:10px;
 				text-align:center;
 				
-				padding:1%;
+				padding:2%;
 				
 				margin-left:32%;
 				margin-right:32%;
+                margin-top: 30px;
+                
+                
 				color:gray;
 			}
 			
@@ -86,11 +103,11 @@
 				font-family:Arial;
 				font-weight:bold;
 				color:#bcbcbc;
-				font-size:20px;
+				font-size:18px;
 				
 				margin-left:10%;
 				margin-right:10%;
-				padding:0.5%;
+				padding:0.2%;
 			}
 			
 			div.tasksIshrath:hover {
@@ -98,16 +115,16 @@
 				transform:scale(0.9005);
 			}
 			
-			a.JR:link {
+			a.TL:link {
 				color:gray;
 				text-decoration:none;
 			}
 			
-			a.JR:visited {
+			a.TL:visited {
 				color:gray;
 			}
 			
-			a.JR:hover {
+			a.TL:hover {
 				color:#DF7104;
 			}
 		
@@ -119,11 +136,11 @@
 	
 		<div class="introIshrath">
 			<div class="titleIshrath" >
-				<img class="LogoImage" src="insert the team logo" alt="CW team Logo" width="70px" height="70px">
-				<h2>PAGE DEVELOPER</h2>
+				
+				<h1>Page Editor</h1>
 			</div>
 			
-			<img class="Ishrath" src="Student Details/Ishrath.png" alt="Ishrath_Profile" width="140px" height="180px" >
+			<img class="Ishrath" src="Ishrath.png" alt="Ishrath_Profile" width="130px" height="130px" >
 			
 			<h1 class="helloIshrath">Hello...</h1>
 			<h2>I'm <abbr title="Isyathur Rahuman Muhammadu Ishrath">Muhammadu Ishrath</abbr></h2>
@@ -131,11 +148,16 @@
 			
 			<div class="tasksIshrath">
 				<h1 class="topicTask">Tasks: </h1>
-				<a href="MainPage.html" class="JR"><h4>Main Page</h4></a>
-				<a href="CommentsForm.html" class="JR"><h4>Comments Form</h4></a>
-                <a href="IndividualPage.html" class="JR"><h4>Individual Page(not yet done)</h4></a>
+				<a href="MainPage.html" class="TL"><h4>Main Page</h4></a>
+				<a href="QueryForm.html" class="TL"><h4>Query Form</h4></a>
+                <a href="IndividualPage.html" class="TL"><h4>Individual Page</h4></a>
+                
+                
 
 			</div>
+            <br>
+            <a class="back_button" href='MainPage.html'>Go Back</a>
+
 		</div>
 
 	</body>
