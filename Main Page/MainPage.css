@@ -57,10 +57,12 @@ header {
 
 .navpages li a {
 	transition: 0.3s ease 0s;
+	text-decoration: underline;
 }
 
 .navpages li a:hover {
-	color: #DF7104;
+	/* color: #DF7104; */
+	background-color: #93b8b5; color: #ffffff; padding: 15px 25px; 
 }
 
 button {
@@ -70,6 +72,7 @@ button {
 	border-radius: 3.125em;
 	cursor: pointer;
 	transition: 0.3s ease 0s;
+	background-color: #93b8b5; color: #ffffff; 
 	
 }
 
@@ -90,4 +93,20 @@ body.homeBody {
 div.pgdeveloper {
 	margin-top:31%;
 	margin-left:2%;
+}
+
+.pageimgset2 {
+	margin-top: 50px;
+
+}
+.pageimgset1 {
+	margin-top: 100px;
+
+}
+
+.eachimg{
+	margin: 40px;
+	height: 55%;
+	width: 35%;
+	margin-left: 140px;
 }
