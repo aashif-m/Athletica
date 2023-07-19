@@ -8,19 +8,27 @@
         <link rel="stylesheet" href="QuizMainPage.CSS" />
     </head>
     <body>
-        <div class = "Instructions">
-          <h2>Instructions</h2>
-          <p>Read the Questions carefully and select only 1 option.</p>
-          <p>You have 60 Seconds to answer each question.</p>
-          <p>There are 10 Questions in total.</p>
-          <p>Final Score is Calculated based on the number of correct answers.</p>
+
+        <!--QuiZ Intructions-->
+
+        <div class = "Instructions-box">
+          <div class="information-title"><span>Rules of this Quiz</span></div>
+          <div class="info-list">
+            <div class="rules">Read the Questions carefully and select only 1 option.</div>
+            <div class="rules">You have only <b>60 Seconds</b> to answer each question.</div>
+            <div class="rules">There are 10 Questions in total.</div>
+            <div class="rules">Cannot exit the quiz while playing it.</div>
+            <div class="rules">Final Score is Calculated based on the number of correct answers.</div>
+          </div>
         </div>
+
+        <!--Details and Start Quiz Button-->
         <form>
           <div class="group">
             <label>Enter Username</label>
             <input placeholder="Username" autofocus required>
           </div>
-          <a class="button" href="QuizPage.html">Start Quiz</a>
+          <div class="start_btn"><button>Start Quiz</button></div>
         </form>
     </body>
 </html>
