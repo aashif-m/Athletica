@@ -65,6 +65,12 @@ header {
 	background-color: #93b8b5; color: #ffffff; padding: 15px 25px; 
 }
 
+.navpages li a:active{
+
+	background-color: #ce1313;
+	color: chartreuse;
+}
+
 button {
 	padding: 0.5625em 1.5625em;
 	background-color: #444444;
