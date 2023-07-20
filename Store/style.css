@@ -1,51 +1,124 @@
 body{
-    font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+}
+
+.page-title-container {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.container {
+display: flex;
+max-width: 1600px;
+margin: 0 auto;
+}
+
+.products-container {
+  width: 75%;
 }
 
 .product {
-    width: 300px;
-    border: 1px solid #ccc;
-    display: inline-flex;
-    flex-direction: column;
-    transition: transform .2s;
-    flex-wrap: wrap;
-    margin: 10px;
-  }
-    
-  .product:hover{
-    transform: scale(1.1);
-  }
+  width: 300px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+  background-color: #fff;
+  display: inline-flex;
+  flex-direction: column;
+  transition: transform .2s;
+  flex-wrap: wrap;
+  padding: 10px 10px 10px 10px;
+  margin: 10px;
+}
   
-  .product img {
-    width: 100%;
-    height: 75%;
-    object-fit: cover;
+.product:hover{
+  transform: scale(1.1);
+}
 
-  }
-  
-  .product .info {
-    text-align: center;
-    width: 100%;
-    height: 25%;
-    padding: 0px;
-    box-sizing: border-box;
-  }
-  
-  .product .info h3 {
-    font-size: 20px;
-  }
-  
-  .product .info .price {
-    margin: 10px 0;
-    font-size: 18px;
-  }
-  
-  .product .info button {
-    width: 100%;
-    height: 50px;
-    border: none;
-    background-color: #000;
-    color: #fff;
-    font-size: 16px;
-  }
-  
+.product img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.product .info {
+  text-align: center;
+  width: 100%;
+  height: 25%;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.product .info h3 {
+  font-size: 20px;
+}
+
+.product .info .price {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.product .info button {
+  width: 100%;
+  height: 50px;
+  border-radius:5px;
+  border:none;
+  background-color: #000;
+  color: #fff;
+  font-size: 16px;
+}
+
+.order-container {
+width: 25%;
+}
+
+.order-form {
+border-radius: 10px;
+box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+padding: 20px;
+}
+
+.order-form h2 {
+text-align: center;
+}
+
+.order-form .order-items {
+min-height: 50px;
+}
+
+.order-item img {
+  float: left;
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  margin-right: 5px;
+}
+
+
+.order-form .total {
+text-align: center;
+font-weight: bold;
+}
+
+.order-form button {
+ width: 100%;
+ height: 50px;
+ border-radius:5px;
+ border:none;
+ background-color:#000;
+ color:#fff;
+ font-size:16px; 
+}
+
+button {
+  cursor: pointer;
+}
+
+.order-form button:disabled{
+  background-color: #ccc;
+  color: #000;
+  cursor: not-allowed;
+}
