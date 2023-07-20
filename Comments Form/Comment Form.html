@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment Form</title>
+    <style>
+
+            /* Optional: Apply some styles to the form container or other elements if needed */
+            form {
+            width: 100%;
+            margin: 20px;
+            }
+
+            div{
+                background-color: bisque;
+            }
+
+            /* Optional: Adjust radio button styles */
+            input[type="radio"] {
+            /* Add your custom styles here */
+            margin-left: 0px;
+            margin-right: 10px;
+            }
+
+            /* Display radio buttons horizontally */
+            div {
+            display: flex; /* Use 'inline-flex' if you want them to wrap within a specific width */
+            }
+
+            /* Adjust spacing between radio buttons if needed */
+            label {
+            margin-left: 0px;
+            margin-right: 10px;
+            }
+
+            .radio{
+                margin: 30px;
+            }
+
+    </style>
+</head>
+<body>
+    <form action="mailto:ishrathmuhammadu@gmail.com" enctype="text/plain" method="post">
+        <label for=""><br>how satisfied were you with our website today?<br>
+             choosse from 0 to 10, where 0 is extremely dissatisfied and 10 is extremely satisfied.
+        </label>
+        <br>
+        <br>
+        
+            <div con="radio">
+              <label> 0<br><input type="radio" name="option" value="0"></label>
+              <label> 1<br><input type="radio" name="option" value="1"></label>
+              <label> 2<br><input type="radio" name="option" value="2"></label>
+              <label> 3<br><input type="radio" name="option" value="3"></label>
+              <label> 4<br><input type="radio" name="option" value="4"></label>
+              <label> 5<br><input type="radio" name="option" value="5"></label>
+              <label> 6<br><input type="radio" name="option" value="6"></label>
+              <label> 7<br><input type="radio" name="option" value="7"></label>
+              <label> 8<br><input type="radio" name="option" value="8"></label>
+              <label> 9<br><input type="radio" name="option" value="9"></label>
+              <label> 10<br><input type="radio" name="option" value="10"></label>
+            </div>
+
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <div class="reason">
+                <label for="reas">Please could you tell us the reasons for giving this ratings <br><textarea name="reason" id="reas" cols="60" rows="6"></textarea></label>
+            </div>
+
+            <br>
+            <br>
+
+
+            <div>
+
+                <label for="optionsset1">How did you want to complete this task today?(Optional)<br><select  value="Please select an option" name="optionsset1" id="optionsset1" >
+                    <option value="phone">phone</option>
+                    <option value="website">website</option>
+                    <option value="webchat">webchat</option>
+                    <option value="social media">social media</option>
+                    <option value="email">email</option></label>
+                </select>
+            </div>
+            
+            <br>
+            <br>
+
+            <div>
+                <label for="optionsset2">If you had to complete this task again, How did you prefer to do it?(Optional)<br><select  value="Please select an option" name="optionsset2" id="optionsset2" >
+                    <option value="phone">phone</option>
+                    <option value="website">website</option>
+                    <option value="webchat">webchat</option>
+                    <option value="social media">social media</option>
+                    <option value="email">email</option></label>
+                </select>
+            </div>
+
+            <br>
+            <br>
+            <input type="reset" name="reset" value="reset">
+            <input type="submit" name="submot" value="submit">
+
+    </form>
+
+   
+</body>
+</html>

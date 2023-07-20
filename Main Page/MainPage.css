@@ -3,6 +3,9 @@
 
 /* ---------- NAV Bar Styling ---------- */
 
+
+
+
 * {
 	font-family: sans-serif;
 }
@@ -34,6 +37,7 @@ header {
 	justify-content: space-between;
 	align-items: center;
 	padding: 1.875em 10%;
+	
 	
 	 
 }
@@ -97,22 +101,42 @@ body.homeBody {
 
 
 div.pgdeveloper {
-	margin-top:31%;
+	margin-top:5%;
 	margin-left:2%;
+	margin-bottom: 2%;
+	
 }
 
-.pageimgset2 {
-	margin-top: 50px;
 
-}
 .pageimgset1 {
-	margin-top: 100px;
+	display: inline-block;
+	margin-top: 15%; /* adjustment with the fixed position */
+
+}
+.pageimgset2 {
+	display: inline-block;
 
 }
 
 .eachimg{
-	margin: 40px;
+	margin-top: 8%;
+	margin-left: 30%;
+	
 	height: 55%;
-	width: 35%;
-	margin-left: 140px;
+	width: 75%;
+	
 }
+
+#img2{
+	height: 55%;
+	width: 65%;
+}
+
+#img4{
+	height: 55%;
+	width: 90%;
+	margin-left: 35%     ;
+}
+
+
+
