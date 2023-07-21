@@ -3,21 +3,19 @@
 
 }
 
-.container{
-
- min-height: 74vh;
-    
-}
-.topdiv{
-    height:0vh;
-    
+.footer{
+    height:7vh;
 	background-size: cover;
+	background: linear-gradient(to bottom, #586c6e 0%, #0b5daf 100%);
+	padding-left: 30px;
 
 }
+
 .bottomdiv{
     display: flex;
-    height: 74vh;
-    background: linear-gradient(to bottom, #00ccff 0%, #ffcccc 100%);
+    height: 70vh;
+    background: linear-gradient(to bottom, #181e1f 0%, #d1cbcb 100%);
+	padding-top: 120px
 	
     
 }
@@ -32,7 +30,7 @@ h1{
     margin-left: 100px;
 }
 rect {
-    fill: rgb(102, 102, 245) ;
+    fill: blue ;
     stroke: black;
     stroke-width: 5;
     opacity: 1;
@@ -61,6 +59,10 @@ rect:hover,
     stroke: black;
     stroke-width: 8px;
     stroke-linecap:round;
+}
+.pageEditor{
+	
+	font-size: 20px;
 }
 
 
