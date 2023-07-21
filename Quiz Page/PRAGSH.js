@@ -275,5 +275,4 @@ function closeOptionModal() {
 }
 
 
-var userName = document.getElementById('userName');     
-userName.innerText = "NickName : " + localStorage.getItem('name');
+
