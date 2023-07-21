@@ -1,34 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title>Quiz-Page</title>
-        <link rel="stylesheet" href = "QuizPage.css">
-    </head>
-    <body>
-        <div class="container">
-            <div class="loader"></div>
-            <header>
-               <div class="Quiztitle">Atheletica</div>
-               <div class="question_total">
-                    
-               </div>
-            </header>
-            <section>
-                <div class="question"></div>
-                <div class="options"></div>
-            </section> 
-            <footer>
-                <div class="timer">
-                    <div class="time_left_text">Time Left: </div>
-                    <div class="time_left"></div>
-                </div>
-                <button class="next_question_btn">Next Question</button>
-            </footer>
-        </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Quiz-Page</title>
+    <link rel="stylesheet" href="QuizPage.css">
+</head>
+<body>
+    <div class="container">
+        <div class="loader"></div>
+        <header>
+            <div class="Quiztitle">Athletica</div>
+            <div class="question_total">Question: <span id="QuestionNumber"></span> / 10</div>
+        </header>
+        <section>
+            <div class="question">
+                <div id="display-question">QUIZ</div>
+            </div>
+            <div class="options">
 
-        
-    </body>
+                <div class="modal-container" id="option-modal">
+
+                    <div class="modal-content-container">
+                        <h1>Please Pick An Option</h1>
+
+                        <div class="modal-button-container">
+                            <button onclick="closeOptionModal()">Continue</button>
+                        </div>
+
+                    </div>
+
+                </div>
+                
+                <span>
+                    <input type="radio" id="option-one" name="option" class="radio" value="optionA">
+                    <label for="option-one" class="option" id="optionA"></label>
+                </span>
+
+                <span>
+                    <input type="radio" id="option-two" name="option" class="radio" value="optionB">
+                    <label for="option-two" class="option" id="optionB"></label>
+                </span>
+
+                <span>
+                    <input type="radio" id="option-three" name="option" class="radio" value="optionC">
+                    <label for="option-three" class="option" id="optionC"></label>
+                </span>
+
+                <span>
+                    <input type="radio" id="option-four" name="option" class="radio" value="optionD">
+                    <label for="option-four" class="option" id="optionD"></label>
+                </span>
+            </div>
+        </section>
+        <footer>
+            <div class="timer">
+                <div class="time_left_text">Time Left:</div>
+                <div class="time_left" id="time_left">120</div>
+            </div>
+            <button class="next_question_btn" onclick="NextQuestion()">Next Question</button>
+        </footer>
+    </div>
+
+    <div class="result_box">
+        <div class="icon"></div>
+        <h1>Congratulations!!</h1>
+        <div class="score_results">
+            <p id="username"></p>
+            <p>Score: <span id="correct-answers"></span> / 10</p>
+            <p>Time taken: <span id="time_taken"></span> seconds</p>
+            <p><span id="remarks"></span></p>
+        </div>
+    </div>
+
+    <script src="QuizPage1.js"></script>
+</body>
 </html>
