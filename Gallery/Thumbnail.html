@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thumbnail Images</title>
+    <link rel="stylesheet" href="Thumbnail.css">
+</head>
+<header>
+    <img src="Logo.png" class="logo" alt="logo" width="10%" height="10%">
+    <nav> 
+        <ul class="navpages">
+            <li><a href="MainPage.html">Home</a></li>
+            <li><a href="Store\Store.html">Products</a></li>
+            <li><a href=" (Student2).html">Form</a></li>
+            <li><a href="Quiz Page\QuizMainPage.html">Quiz</a></li>
+            <li><a href="">Site Map</a></li>
+        </ul>
+    </nav>
+    <a class="cta"  href="Student Details\StudentDetailsPage.html"><button class="contactButton">About us</button></a>
+</header>
+
+<body>
+    <h1>  A  T  H  L  E  T  I  C  A   -   S  P  O  R  T  S </h1>
+    
+    <div>
+         <button id="click" class="buttonMain button1"  onclick=change() > BG</button>
+    </div>
+    <div>
+        <button id="TxtSize" class="buttonMain button1"  onclick=changeTxtSize() > TxtSize</button>
+    </div>
+
+    
+
+    <div class="image-container">
+        <div>
+            <p>Racing</p>
+            <img class="hoverEff" src="racing.jpg" width="300" height="200" alt="V8 Supercar racing is wild, violent and very close. 
+            The cars are basically on top of each other the entire race. Every Australian driver dreams of winning Bathurst.">
+        </div>
+        <div>
+            <p>Boxing</p>
+            <img class="hoverEff" src="boxing.jpeg" width="300" height="200" alt="Matched in weight and ability, boxing contestants try to land blows 
+            hard and often with their fists, each attempting to avoid the blows of the opponent. A boxer wins a match either
+             by outscoring the opponent—points can be tallied in several ways—or by rendering the opponent incapable of continuing the match">
+        </div>
+    </div>
+    <div class="horizontalImg">
+        <div>
+            <p>Soccer</p>
+            <img class="hoverEff" src="football.jpg" width="300" height="200" alt="Matched in weight and ability, boxing contestants try to land blows 
+            hard and often with their fists, each attempting to avoid the blows of the opponent. A boxer wins a match either
+             by outscoring the opponent—points can be tallied in several ways—or by rendering the opponent incapable of continuing the match">
+        </div>
+
+        <div>
+            <p>Cricket</p>
+            <img class="hoverEff" src="cricket.jpeg" width="300" height="200"alt="Matched in weight and ability, boxing contestants try to land blows 
+            hard and often with their fists, each attempting to avoid the blows of the opponent. A boxer wins a match either
+            by outscoring the opponent—points can be tallied in several ways—or by rendering the opponent incapable of continuing the match" >
+        </div>
+        <div>
+            <p>Esports</p>
+            <img class="hoverEff" src="esports.jpg" width="300" height="200"alt="Matched in weight and ability, boxing contestants try to land blows 
+            hard and often with their fists, each attempting to avoid the blows of the opponent. A boxer wins a match either
+            by outscoring the opponent—points can be tallied in several ways—or by rendering the opponent incapable of continuing the match" >
+        </div>
+    </div>
+     
+    <div>
+        <div id="Border" class="imageBorder">
+            <img class="Imgcontent" id="thisImg">
+            <div id="ImgDescription"></div>
+        </div>
+    </div>
+    <hr>
+
+    
+
+   <footer>
+        <a style="color: cyan;" href="pageeditor.html">Page Editor</a>
+    </footer>
+
+    <script>
+        const colors = ['black','#301934',' #BDB5D5', '#C0C0C0'];
+        const textColors = ['white', 'white', 'black', 'black'];
+        let indexColour=0
+        function change() {
+            indexColour=(indexColour+1)%colors.length;
+            document.body.style.backgroundColor = colors[indexColour];      //BACKGROUND COLOUR 
+            document.body.style.color =textColors[indexColour];
+
+        }
+        document.body.style.color = textColors[0];
+
+        let clickCount=0;
+        function changeTxtSize() {
+        clickCount++; 
+
+        if (clickCount % 4 === 0) {
+        
+            document.querySelectorAll('*').forEach(element => {          //fONT SIZE CHANGE
+                element.style.fontSize = '';
+            });
+        } else {
+            
+            document.querySelectorAll('*').forEach(element => {
+                let currentFontSize = parseInt(window.getComputedStyle(element).fontSize, 10);
+                element.style.fontSize = currentFontSize + 2 + 'px';
+            });
+        }
+    }
+
+        var imageCount = document.getElementsByClassName("hoverEff");
+        var ThisBorder = document.getElementById("Border");
+        var description = document.getElementById("ImgDescription");
+        var imgContent = document.getElementById("thisImg");
+
+        for (let i = 0; i < imageCount.length; i++) {
+        imageCount[i].onmouseenter = function () {                  // MODAL
+            ThisBorder.style.display = "block";
+            imgContent.src = this.src;
+            description.innerHTML = this.alt;
+        };
+
+        imageCount[i].onmouseleave = function () {
+            ThisBorder.style.display = "none";
+        };
+
+
+    }
+
+    </script>
+    
+    
+</body>
+
+
+</html>

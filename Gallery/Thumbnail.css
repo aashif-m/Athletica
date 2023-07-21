@@ -1,0 +1,224 @@
+h1{
+    margin-bottom: auto;
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+}
+
+body{
+    background-color:black;
+    transition: background-color 0.5s, color 0.5s;
+    
+}
+
+#fontButton{
+    margin-right: 10px;
+}
+.studentedit{
+    border: solid;
+    text-align: left;
+    font-size: 20px;
+    color: darkcyan;
+    border-style:ridge;
+    border-color: black;
+    display: inline block;
+    padding: 10px;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+#click {
+    position: relative;
+    float: right;
+    
+}
+#TxtSize{
+    position: relative;
+    float: right;
+    
+}
+
+.buttonMain {
+    background: linear-gradient(to bottom, #cc8500 0%, #000000 100%);
+    border-radius: 12px;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+
+}
+.button1:hover {
+    opacity: 0.3;
+  }
+ 
+.hoverEff:hover{
+    opacity: 0.7;
+    transition: 0.5s;
+    transform: scale(1.1);
+
+}
+.image-container {
+    margin-left: 20px;
+}
+.hoverEff{
+    margin: 0 50px;
+    transition: transform 0.3s ease-in-out;
+}
+div p{
+    font-family: fantasy;
+    font-size: 14px;
+    margin-left: 170px;
+}
+.image-container img {
+    border: 2px solid orange; 
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+}
+.horizontalImg{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin: 30px;
+
+}
+.horizontalImg img{
+    border: 2px solid orange; 
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+    
+
+}
+
+.imageBorder {
+    justify-content: center;
+    color: white;
+    position: relative;
+    display: none;
+    z-index: 1;
+    padding: 10px;
+    width: 1100px;
+    height: 425px; 
+    background-color: rgb(67, 67, 70);
+    background: linear-gradient(to bottom, #cc8500 0%, #000000 100%);
+    outline: 5px solid #B6B6B6;
+
+    
+}
+#Border {
+    justify-content: center;
+    position: fixed;
+    top:190px;
+    left: 500px;
+}
+
+.Imgcontent{
+    max-width: 900px;
+    max-height: 430px;
+    margin: 2px 0px 30px 10px;
+    width: 50%;
+    display: flex;
+    text-align: right;
+    
+}
+#ImgDescription {
+    text-align: center;
+    margin-top: 100px;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+
+} 
+.imageBorder img{
+    float: left;
+    width: 650px;
+    height: 420px;
+   
+}
+					
+
+/* ---------- NAV Bar Styling ---------- */
+
+* {
+	font-family: sans-serif;
+}
+#heading {
+	text-align: center;
+
+}
+
+.logo {
+	cursor: pointer;
+	margin-right: auto;
+}
+
+li, a, button {
+	font-weight: 700;
+	font-size: 1em;
+	color: #ecf0f1;
+	text-decoration: none;
+}
+
+header {
+	border:3px inset rgb(224, 224, 218);
+	border-radius:5px;
+	
+	background-image: url("NaviBarBackground.jpeg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1.875em 10%;
+    margin-bottom: 3px;
+	
+	 
+}
+
+.navpages {
+	list-style: none;
+}
+
+.navpages li:last-of-type{
+	margin-right: 1em;
+	border-right: 0.25em solid white;
+	height: 1.375em; 
+}
+
+.navpages li{
+	display: inline-block;
+	padding: 0px 1.75em;
+	border-left: 0.25em solid white;
+	height: 1.375em;
+}
+
+.navpages li a {
+	transition: 0.3s ease 0s;
+	text-decoration: underline;
+}
+
+.navpages li a:hover {
+	/* color: #DF7104; */
+	background-color: #93b8b5; color: #ffffff; padding: 15px 25px; 
+}
+
+.navpages li a:active{
+
+	background-color: #ce1313;
+	color: chartreuse;
+}
+
+header button {
+	padding: 0.5625em 1.5625em;
+	background-color: #444444;
+	border: none;
+	border-radius: 3.125em;
+	cursor: pointer;
+	transition: 0.3s ease 0s;
+	background-color: #93b8b5; color: #ffffff; 
+	
+}
+
+header button:hover {
+	color:#444444;
+	background-color: gray;
+}
