@@ -16,11 +16,15 @@
 
 nav{
 	display: flex;
+	position: sticky;
 	background-color: rgba(0,0,0,0.5);
 	height:95px auto;
 	width:100%;
 	overflow: hidden;
 	font-family: 'Audiowide', cursive;
+	position: sticky; /* Set the navbar sticky */
+    top: 0; /* Ensure the navbar sticks to the top of the viewport */
+    z-index: 999;
 	
 }
 .logo{
