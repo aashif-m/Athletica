@@ -5,19 +5,20 @@
 
 .container{
 
- min-height: 100vh;
+ min-height: 74vh;
     
 }
 .topdiv{
-    height: 40vh;
-    background-image:url("PageBackground.png");
+    height:0vh;
+    
 	background-size: cover;
 
 }
 .bottomdiv{
     display: flex;
-    height: 60vh;
-    background-color: lightblue;
+    height: 74vh;
+    background: linear-gradient(to bottom, #00ccff 0%, #ffcccc 100%);
+	
     
 }
 h1{
@@ -31,7 +32,7 @@ h1{
     margin-left: 100px;
 }
 rect {
-    fill: blue ;
+    fill: rgb(102, 102, 245) ;
     stroke: black;
     stroke-width: 5;
     opacity: 1;
@@ -58,7 +59,87 @@ rect:hover,
 .lineDes{
     fill:none;
     stroke: black;
-    stroke-width: 10px;
+    stroke-width: 8px;
     stroke-linecap:round;
 }
 
+
+/* ---------- NAV Bar Styling ---------- */
+
+* {
+	font-family: sans-serif;
+}
+#heading {
+	text-align: center;
+
+}
+
+.logo {
+	cursor: pointer;
+	margin-right: auto;
+}
+
+li, a, button {
+	font-weight: 700;
+	font-size: 1em;
+	color: #ecf0f1;
+	text-decoration: none;
+}
+
+header {
+	border:3px inset rgb(224, 224, 218);
+	border-radius:5px;
+	
+	background-image: url("NaviBarBackground.jpeg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1.875em 10%;
+	
+	 
+}
+
+.navpages {
+	list-style: none;
+}
+
+.navpages li:last-of-type{
+	margin-right: 1em;
+	border-right: 0.25em solid white;
+	height: 1.375em; 
+}
+
+.navpages li{
+	display: inline-block;
+	padding: 0px 1.75em;
+	border-left: 0.25em solid white;
+	height: 1.375em;
+}
+
+.navpages li a {
+	transition: 0.3s ease 0s;
+	text-decoration: underline;
+}
+
+.navpages li a:hover {
+	/* color: #DF7104; */
+	background-color: #93b8b5; color: #ffffff; padding: 15px 25px; 
+}
+
+button {
+	padding: 0.5625em 1.5625em;
+	background-color: #444444;
+	border: none;
+	border-radius: 3.125em;
+	cursor: pointer;
+	transition: 0.3s ease 0s;
+	background-color: #93b8b5; color: #ffffff; 
+	
+}
+
+button:hover {
+	color:#444444;
+	background-color: gray;
+}
