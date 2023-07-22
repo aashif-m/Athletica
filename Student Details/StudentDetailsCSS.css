@@ -1,20 +1,32 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Sumana:wght@700&display=swap");
-body {
+
+body{
+  background-image: url(BG.png);
+  background-size: cover;
+}
+
+.student_details {
   align-items: center;
   background-color: #f2f2f2;
   display: flex;
   font-family: "Merriweather", serif;
   flex-wrap: wrap;
   justify-content: center;
-  height: 100vh;
-  margin: 0;
+  min-height: 600px;
+  margin: 100px;
+  max-width: 100%;
+  border: 10px black solid;
+  border-radius: 20px;
+  padding-top: -300px;
+  
 }
 .person {
   align-items: center;
   display: flex;
   flex-direction: column;
   width: 280px;
-  margin: 30px;
+  margin: 0 30px;
+  margin-top: -100px;
 }
 .container {
   border-radius: 50%;
@@ -25,7 +37,7 @@ body {
   width: 400px;
 }
 .container:after {
-  background-color: #f2f2f2;
+  /* background-color: #f2f2f2; */
   content: "";
   height: 10px;
   position: absolute;
