@@ -1,48 +1,69 @@
-.Instructions{
-    max-width: 700px;
-    margin: 0 auto;
-    margin-top: 50px;
-    line-height: 1.6;
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0px 2px 4px rgba(0.2, 0, 0, 0.5);
-    text-align: center;
+.Instructions-box {
+    height: 400px;
+    width: 415px;
+    margin: 20px auto;
+    margin-top: 20px;
+    border-radius: 10px;   /* for the circular effect border */
+    background-color: #B9f158;
 }
 
-.group{
-    border-radius: 15px;
-	width: 380px;
-	margin: 48px auto;
-	padding: 48px 32px 32px 32px;
-	background: #17c1c1;
-	border: 1px solid #ebebeb;
-	box-shadow: rgba(0,0,0,0.14902) 0px 1px 1px 0px,rgba(0,0,0,0.09804) 0px 1px 2px 0px;
-}
 
-.button {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 16px;
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+
+body {
+    background:#202022;
+    font-family: "Bebas Neue",sans-serif;
+    font-size: 20px;
+}
+ 
+
+.information-title {
+    padding-top: 10px;
+    padding-bottom: 30px;
     font-weight: bold;
     text-align: center;
-    text-decoration: none;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
+}
+ 
 
-  body{
-    align-items: center;
-  }
+.rules {
+    text-align: center;
+    font-size: 22px;
+}
+
+
+a {
+    border-radius: 10px;
+    background-color: #B9f158; 
+    border: 0 solid #E5E7EB;
+    box-sizing: border-box;
+    color: #000000;
+    display: flex;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+    justify-content: center;
+    padding: 12px 26px;
+    position: fixed;
+    text-decoration: none #000000 solid;
+    text-decoration-thickness: auto;
+    width: 100%;
+    max-width: 400px;
+    cursor: pointer;  
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the button both horizontally and vertically */
+}
+   
   
-  .button:hover {
-    background-color: #45a049;
-  }
-  
-  .button:active {
-    background-color: #3e8e41;
-  }
-  
+a:focus {
+    outline: 0;
+}
+
+a:hover {
+    color: yellow; 
+}
