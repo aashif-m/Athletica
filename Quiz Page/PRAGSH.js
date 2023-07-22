@@ -1,102 +1,92 @@
 const questions = [
     {
-        //Question 1
-        question: "What do we call if the ball goes to the boundary without hitting the bat and any part of batsman?",
-        optionA: "Wide",
-        optionB: "Leg bye",
-        optionC: "Bye",
-        optionD: "Dead ball",
-        correctOption: "optionC"
+        question: "Which athlete is often referred to as 'The Flying Sikh' and represented India in the 1960 and 1964 Summer Olympics?",
+        optionA: "Milkha Singh",
+        optionB: "Usain Bolt",
+        optionC: "Carl Lewis",
+        optionD: "Jesse Owens",
+        correctoption: "Milkha Singh",
     },
 
     {
-        //Question 2
-        question: "What is the maximum number of overs a bowler can bowl in T-20 cricket?",
-        optionA: "5 overs",
-        optionB: "4 overs",
-        optionC: "6 overs",
-        optionD: "3 overs",
-        correctOption: "optionB"
+        question: "In which sport did Michael Phelps win a record-breaking 23 gold medals in the Olympics?",
+        optionA: "Track and Field",
+        optionB: "Swimming",
+        optionC: "Gymnastics",
+        optionD: "Boxing",
+        correctoption: "Swimming",
     },
 
     {
-        //Question 3
-        question: "How many days is an official test match played across?",
-        optionA: "2 days",
-        optionB: "3 days",
-        optionC: "4 days",
-        optionD: "5 days",
-        correctOption: "optionD"
+        question: "Who is the only tennis player to achieve the 'Golden Slam', winning all four Grand Slam tournaments and an Olympic gold medal in a single calendar year?",
+        optionA: "Rafael Nadal",
+        optionB: " Serena Williams",
+        optionC: "Roger Federer",
+        optionD: "Steffi Graf",
+        correctoption: "Steffi Graf",
     },
 
     {
-        //Question 4
-        question: "How long should a pitch be in a cricket ground?",
-        optionA: "22 yards",
-        optionB: "25 yards",
-        optionC: "27 yards",
-        optionD: "30 yards",
-        correctOption: "optionA"
+        question: "Which country hosted the first-ever FIFA World Cup in 1930?",
+        optionA: "Brazil",
+        optionB: "Italy",
+        optionC: "Germany",
+        optionD: "Uruguay",
+        correctoption: "Uruguay",
     },
 
     {
-        //Question 5
-        question: "In what is the color of the ball used in a One Day International?",
-        optionA: "Red",
-        optionB: "Pink",
-        optionC: "Green",
-        optionD: "White",
-        correctOption: "optionD"
+        question: "Which golfer completed the famous 'Tiger Slam' by holding all four major championship titles concurrently from 2000 to 2001?",
+        optionA: "Phil Mickelson",
+        optionB: "Ernie Els",
+        optionC: "Tiger Woods",
+        optionD: "Rory McIlroy",
+        correctoption: "Tiger Woods",
     },
 
     {
-        //Question 6
-        question: "Who has taken the most test wickets of all time?",
-        optionA: "Anil Kumble",
-        optionB: "Muttiah Muralitharan",
-        optionC: "Shane Warne",
-        optionD: "Wasim Akram",
-        correctOption: "optionB"
+        question: "In which city were the 2016 Summer Olympics held?",
+        optionA: "London, UK",
+        optionB: "Beijing, China",
+        optionC: "Rio de Janeiro, Brazil",
+        optionD: "Tokyo, Japan",
+        correctoption: "Rio de Janeiro, Brazil",
     },
 
     {
-        //Question 7
-        question: "Who has scored the most test match runs in a career?",
-        optionA: "Ricky Ponting",
-        optionB: "Jacques Kallis",
-        optionC: "Brian Lara",
-        optionD: "Sachin Tendulkar",
-        correctOption: "optionD"
+        question: "Which Winter Olympics saw the introduction of snowboarding as an official medal sport?",
+        optionA: "1992 Albertville, France",
+        optionB: "1998 Nagano, Japan",
+        optionC: "2002 Salt Lake City, USA",
+        optionD: "2010 Vancouver, Canada",
+        correctoption: "1998 Nagano, Japan",
     },
 
     {
-        //Question 8
-        question: "Which country recorded the highest team total ever scored in a one day international of 50 overs?",
+        question: "Who holds the record for the most career points scored in the NBA?",
+        optionA: "Kobe Bryant",
+        optionB: "LeBron James",
+        optionC: "Michael Jordan",
+        optionD: "Kareem Abdul-Jabbar",
+        correctoption: "Kareem Abdul-Jabbar",
+    },
+
+    {
+        question: "Which Formula 1 driver famously won the 1976 World Championship, overcoming a near-fatal crash earlier in the season?",
+        optionA: "Niki Lauda",
+        optionB: "Ayrton Senna",
+        optionC: "Alain Prost",
+        optionD: "James Hunt",
+        correctoption: "Niki Lauda",
+    },
+
+    {
+        question: "Which country has won the most field hockey World Cup titles in the history of the tournament?",
         optionA: "Australia",
-        optionB: "South Africa",
-        optionC: "Sri Lanka",
-        optionD: "England",
-        correctOption: "optionD"
-    },
-
-    {
-        //Question 9
-        question: "Which country has won the most World cups in the cricket history?",
-        optionA: "Australia",
-        optionB: "England",
-        optionC: "India",
-        optionD: "West Indies",
-        correctOption: "optionA"
-    },
-
-    {
-        //Question 10
-        question: "Who scored the most individual runs in a single test match innings?",
-        optionA: "Sachin Tendulkar",
-        optionB: "Kumar Sangakkara",
-        optionC: "Virat Kohli",
-        optionD: "Brian Lara",
-        correctOption: "optionD"
+        optionB: "Netherlands",
+        optionC: "Germany",
+        optionD: "India",
+        correctoption: "Netherlands",
     },
 
 ]
@@ -150,14 +140,14 @@ function NextQuestion(index) {
 
 function checkForAnswer() {
     const currentQuestion = shuffledQuestions[indexNumber] //gets current Question 
-    const currentQuestionAnswer = currentQuestion.correctOption //gets current Question's answer
+    const currentQuestionAnswer = currentQuestion.correctoption //gets current Question's answer
     const options = document.getElementsByName("option"); //gets all elements in dom with name of 'option' (in this the radio inputs)
-    let correctOption = null
+    let correctoption = null
 
     options.forEach((option) => {
         if (option.value === currentQuestionAnswer) {
             //get's correct's radio input with correct answer
-            correctOption = option.labels[0].id
+            correctoption = option.labels[0].id
         }
     })
    
@@ -169,7 +159,7 @@ function checkForAnswer() {
     //checking if checked radio button is same as answer
     options.forEach((option) => {
         if (option.checked === true && option.value === currentQuestionAnswer) {
-            document.getElementById(correctOption).style.backgroundColor = "#3ee739"
+            document.getElementById(correctoption).style.backgroundColor = "#3ee739"
             playerScore++
             indexNumber++
             //set to delay question number till when next question loads
@@ -181,7 +171,7 @@ function checkForAnswer() {
         else if (option.checked && option.value !== currentQuestionAnswer) {
             const wrongLabelId = option.labels[0].id
             document.getElementById(wrongLabelId).style.backgroundColor = "#ff5858"
-            document.getElementById(correctOption).style.backgroundColor = "#3ee739"
+            document.getElementById(correctoption).style.backgroundColor = "#3ee739"
             wrongAttempt++
             indexNumber++
             //set to delay question number till when next question loads
