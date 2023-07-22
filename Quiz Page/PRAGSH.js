@@ -1,102 +1,102 @@
 const questions = [
     {
         //Question 1
-        question: "What do we call if the ball goes to the boundary without hitting the bat and any part of batsman?",
-        optionA: "Wide",
-        optionB: "Leg bye",
-        optionC: "Bye",
-        optionD: "Dead ball",
-        correctOption: "optionC"
+        question: "Which athlete is often referred to as 'The Flying Sikh' and represented India in the 1960 and 1964 Summer Olympics?",
+        optionA: "Milkha Singh",
+        optionB: "Usain Bolt",
+        optionC: "Carl Lewis",
+        optionD: "Jesse Owens",
+        correctOption: "optionA"
     },
 
     {
         //Question 2
-        question: "What is the maximum number of overs a bowler can bowl in T-20 cricket?",
-        optionA: "5 overs",
-        optionB: "4 overs",
-        optionC: "6 overs",
-        optionD: "3 overs",
+        question: "In which sport did Michael Phelps win a record-breaking 23 gold medals in the Olympics?",
+        optionA: "Track and Field",
+        optionB: "Swimming",
+        optionC: "Gymnastics",
+        optionD: "Boxing",
         correctOption: "optionB"
     },
 
     {
         //Question 3
-        question: "How many days is an official test match played across?",
-        optionA: "2 days",
-        optionB: "3 days",
-        optionC: "4 days",
-        optionD: "5 days",
+        question: "Who is the only tennis player to achieve the 'Golden Slam', winning all four Grand Slam tournaments and an Olympic gold medal in a single calendar year?",
+        optionA: "Rafael Nadal",
+        optionB: " Serena Williams",
+        optionC: "Roger Federer",
+        optionD: "Steffi Graf",
         correctOption: "optionD"
     },
 
     {
         //Question 4
-        question: "How long should a pitch be in a cricket ground?",
-        optionA: "22 yards",
-        optionB: "25 yards",
-        optionC: "27 yards",
-        optionD: "30 yards",
-        correctOption: "optionA"
+        question: "Which country hosted the first-ever FIFA World Cup in 1930?",
+        optionA: "Brazil",
+        optionB: "Italy",
+        optionC: "Germany",
+        optionD: "Uruguay",
+        correctOption: "optionD"
     },
 
     {
         //Question 5
-        question: "In what is the color of the ball used in a One Day International?",
-        optionA: "Red",
-        optionB: "Pink",
-        optionC: "Green",
-        optionD: "White",
-        correctOption: "optionD"
+        question: "Which golfer completed the famous 'Tiger Slam' by holding all four major championship titles concurrently from 2000 to 2001?",
+        optionA: "Phil Mickelson",
+        optionB: "Ernie Els",
+        optionC: "Tiger Woods",
+        optionD: "Rory McIlroy",
+        correctOption: "optionC"
     },
 
     {
         //Question 6
-        question: "Who has taken the most test wickets of all time?",
-        optionA: "Anil Kumble",
-        optionB: "Muttiah Muralitharan",
-        optionC: "Shane Warne",
-        optionD: "Wasim Akram",
-        correctOption: "optionB"
+        question: "In which city were the 2016 Summer Olympics held?",
+        optionA: "London, UK",
+        optionB: "Beijing, China",
+        optionC: "Rio de Janeiro, Brazil",
+        optionD: "Tokyo, Japan",
+        correctOption: "optionC"
     },
 
     {
         //Question 7
-        question: "Who has scored the most test match runs in a career?",
-        optionA: "Ricky Ponting",
-        optionB: "Jacques Kallis",
-        optionC: "Brian Lara",
-        optionD: "Sachin Tendulkar",
-        correctOption: "optionD"
+        question: "Which Winter Olympics saw the introduction of snowboarding as an official medal sport?",
+        optionA: "1992 Albertville, France",
+        optionB: "1998 Nagano, Japan",
+        optionC: "2002 Salt Lake City, USA",
+        optionD: "2010 Vancouver, Canada",
+        correctOption: "optionB"
     },
 
     {
         //Question 8
-        question: "Which country recorded the highest team total ever scored in a one day international of 50 overs?",
-        optionA: "Australia",
-        optionB: "South Africa",
-        optionC: "Sri Lanka",
-        optionD: "England",
+        question: "Who holds the record for the most career points scored in the NBA?",
+        optionA: "Kobe Bryant",
+        optionB: "LeBron James",
+        optionC: "Michael Jordan",
+        optionD: "Kareem Abdul-Jabbar",
         correctOption: "optionD"
     },
 
     {
         //Question 9
-        question: "Which country has won the most World cups in the cricket history?",
-        optionA: "Australia",
-        optionB: "England",
-        optionC: "India",
-        optionD: "West Indies",
+        question: "Which Formula 1 driver famously won the 1976 World Championship, overcoming a near-fatal crash earlier in the season?",
+        optionA: "Niki Lauda",
+        optionB: "Ayrton Senna",
+        optionC: "Alain Prost",
+        optionD: "James Hunt",
         correctOption: "optionA"
     },
 
     {
         //Question 10
-        question: "Who scored the most individual runs in a single test match innings?",
-        optionA: "Sachin Tendulkar",
-        optionB: "Kumar Sangakkara",
-        optionC: "Virat Kohli",
-        optionD: "Brian Lara",
-        correctOption: "optionD"
+        question: "Which country has won the most field hockey World Cup titles in the history of the tournament?",
+        optionA: "Australia",
+        optionB: "Netherlands",
+        optionC: "Germany",
+        optionD: "India",
+        correctOption: "optionB"
     },
 
 ]
@@ -232,17 +232,28 @@ function handleEndGame() {
     let remarkColor = null
 
     // condition check for player remark and remark color
-    if (playerScore <= 3) {
-        remark = "Bad Grades, Keep Practicing."
-        remarkColor = "red"
-    }
-    else if (playerScore >= 4 && playerScore < 7) {
-        remark = "Average Grades, You can do better."
-        remarkColor = "orange"
-    }
-    else if (playerScore >= 7) {
-        remark = "Excellent, Keep the good work going."
-        remarkColor = "green"
+    // if (playerScore <= 3) {
+    //     remark = "Bad Grades, Keep Practicing."
+    //     remarkColor = "red"
+    // }
+    // else if (playerScore >= 4 && playerScore < 7) {
+    //     remark = "Average Grades, You can do better."
+    //     remarkColor = "orange"
+    // }
+    // else if (playerScore >= 7) {
+    //     remark = "Excellent, Keep the good work going."
+    //     remarkColor = "green"
+    // }
+
+    if(playerScore > 7){
+        remark = "Excellent 🥳, Keep working hard!!"
+        remarkcolor = "green"
+    } else if (playerScore > 4){
+        remark = "Good 🙌, Can do better!!"
+        remarkcolor = "orange"
+    } else {
+        remark="Missed it 😔, Keep Practicing and better luck!!"
+        remarkcolor = "red"
     }
     const playerGrade = (playerScore / 10) * 100
 
