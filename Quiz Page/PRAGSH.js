@@ -1,92 +1,102 @@
 const questions = [
     {
+        //Question 1
         question: "Which athlete is often referred to as 'The Flying Sikh' and represented India in the 1960 and 1964 Summer Olympics?",
         optionA: "Milkha Singh",
         optionB: "Usain Bolt",
         optionC: "Carl Lewis",
         optionD: "Jesse Owens",
-        correctoption: "Milkha Singh",
+        correctOption: "optionA"
     },
 
     {
+        //Question 2
         question: "In which sport did Michael Phelps win a record-breaking 23 gold medals in the Olympics?",
         optionA: "Track and Field",
         optionB: "Swimming",
         optionC: "Gymnastics",
         optionD: "Boxing",
-        correctoption: "Swimming",
+        correctOption: "optionB"
     },
 
     {
+        //Question 3
         question: "Who is the only tennis player to achieve the 'Golden Slam', winning all four Grand Slam tournaments and an Olympic gold medal in a single calendar year?",
         optionA: "Rafael Nadal",
         optionB: " Serena Williams",
         optionC: "Roger Federer",
         optionD: "Steffi Graf",
-        correctoption: "Steffi Graf",
+        correctOption: "optionD"
     },
 
     {
+        //Question 4
         question: "Which country hosted the first-ever FIFA World Cup in 1930?",
         optionA: "Brazil",
         optionB: "Italy",
         optionC: "Germany",
         optionD: "Uruguay",
-        correctoption: "Uruguay",
+        correctOption: "optionD"
     },
 
     {
+        //Question 5
         question: "Which golfer completed the famous 'Tiger Slam' by holding all four major championship titles concurrently from 2000 to 2001?",
         optionA: "Phil Mickelson",
         optionB: "Ernie Els",
         optionC: "Tiger Woods",
         optionD: "Rory McIlroy",
-        correctoption: "Tiger Woods",
+        correctOption: "optionC"
     },
 
     {
+        //Question 6
         question: "In which city were the 2016 Summer Olympics held?",
         optionA: "London, UK",
         optionB: "Beijing, China",
         optionC: "Rio de Janeiro, Brazil",
         optionD: "Tokyo, Japan",
-        correctoption: "Rio de Janeiro, Brazil",
+        correctOption: "optionC"
     },
 
     {
+        //Question 7
         question: "Which Winter Olympics saw the introduction of snowboarding as an official medal sport?",
         optionA: "1992 Albertville, France",
         optionB: "1998 Nagano, Japan",
         optionC: "2002 Salt Lake City, USA",
         optionD: "2010 Vancouver, Canada",
-        correctoption: "1998 Nagano, Japan",
+        correctOption: "optionB"
     },
 
     {
+        //Question 8
         question: "Who holds the record for the most career points scored in the NBA?",
         optionA: "Kobe Bryant",
         optionB: "LeBron James",
         optionC: "Michael Jordan",
         optionD: "Kareem Abdul-Jabbar",
-        correctoption: "Kareem Abdul-Jabbar",
+        correctOption: "optionD"
     },
 
     {
+        //Question 9
         question: "Which Formula 1 driver famously won the 1976 World Championship, overcoming a near-fatal crash earlier in the season?",
         optionA: "Niki Lauda",
         optionB: "Ayrton Senna",
         optionC: "Alain Prost",
         optionD: "James Hunt",
-        correctoption: "Niki Lauda",
+        correctOption: "optionA"
     },
 
     {
+        //Question 10
         question: "Which country has won the most field hockey World Cup titles in the history of the tournament?",
         optionA: "Australia",
         optionB: "Netherlands",
         optionC: "Germany",
         optionD: "India",
-        correctoption: "Netherlands",
+        correctOption: "optionB"
     },
 
 ]
@@ -140,14 +150,14 @@ function NextQuestion(index) {
 
 function checkForAnswer() {
     const currentQuestion = shuffledQuestions[indexNumber] //gets current Question 
-    const currentQuestionAnswer = currentQuestion.correctoption //gets current Question's answer
+    const currentQuestionAnswer = currentQuestion.correctOption //gets current Question's answer
     const options = document.getElementsByName("option"); //gets all elements in dom with name of 'option' (in this the radio inputs)
-    let correctoption = null
+    let correctOption = null
 
     options.forEach((option) => {
         if (option.value === currentQuestionAnswer) {
             //get's correct's radio input with correct answer
-            correctoption = option.labels[0].id
+            correctOption = option.labels[0].id
         }
     })
    
@@ -159,7 +169,7 @@ function checkForAnswer() {
     //checking if checked radio button is same as answer
     options.forEach((option) => {
         if (option.checked === true && option.value === currentQuestionAnswer) {
-            document.getElementById(correctoption).style.backgroundColor = "#3ee739"
+            document.getElementById(correctOption).style.backgroundColor = "#3ee739"
             playerScore++
             indexNumber++
             //set to delay question number till when next question loads
@@ -171,7 +181,7 @@ function checkForAnswer() {
         else if (option.checked && option.value !== currentQuestionAnswer) {
             const wrongLabelId = option.labels[0].id
             document.getElementById(wrongLabelId).style.backgroundColor = "#ff5858"
-            document.getElementById(correctoption).style.backgroundColor = "#3ee739"
+            document.getElementById(correctOption).style.backgroundColor = "#3ee739"
             wrongAttempt++
             indexNumber++
             //set to delay question number till when next question loads
@@ -222,17 +232,28 @@ function handleEndGame() {
     let remarkColor = null
 
     // condition check for player remark and remark color
-    if (playerScore <= 3) {
-        remark = "Bad Grades, Keep Practicing."
-        remarkColor = "red"
-    }
-    else if (playerScore >= 4 && playerScore < 7) {
-        remark = "Average Grades, You can do better."
-        remarkColor = "orange"
-    }
-    else if (playerScore >= 7) {
-        remark = "Excellent, Keep the good work going."
-        remarkColor = "green"
+    // if (playerScore <= 3) {
+    //     remark = "Bad Grades, Keep Practicing."
+    //     remarkColor = "red"
+    // }
+    // else if (playerScore >= 4 && playerScore < 7) {
+    //     remark = "Average Grades, You can do better."
+    //     remarkColor = "orange"
+    // }
+    // else if (playerScore >= 7) {
+    //     remark = "Excellent, Keep the good work going."
+    //     remarkColor = "green"
+    // }
+
+    if(playerScore > 7){
+        remark = "Excellent 🥳, Keep working hard!!"
+        remarkcolor = "green"
+    } else if (playerScore > 4){
+        remark = "Good 🙌, Can do better!!"
+        remarkcolor = "orange"
+    } else {
+        remark="Missed it 😔, Keep Practicing and better luck!!"
+        remarkcolor = "red"
     }
     const playerGrade = (playerScore / 10) * 100
 
