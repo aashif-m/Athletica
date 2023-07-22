@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Editor - Chenuka</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: black;
+            color: white;
+        }
+
+        .myIntro {
+            height: 75%;
+            width: 80%; 
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 5px solid white;
+            border-radius: 10px;
+        }
+
+        .myImg {
+            max-width: 200px;
+            background-color: orange;
+            border-radius: 50%;
+            border:3px solid white
+        }
+
+        .mydetails {
+            margin-top: 40px;
+        }
+
+        .back-button {
+            margin-top: 30px;
+            text-decoration: none;
+        }
+        .innerBorder {
+        border: 2px solid white; 
+        border-radius: 5px; 
+        padding: 10px; 
+        }
+        .myImg {
+             transition: transform 0.3s;
+        }
+        .myImg:hover {
+            transform: scale(1.1);
+        }
+        div a{
+            text-decoration: none;
+            color: gray;
+            font-size: 20px;
+        }div a:hover{
+            color: orange;
+            text-decoration: underline;
+        }
+
+        
+
+
+    </style>
+</head>
+<body>
+    <div class="myIntro">
+        <div>
+            <img src="Chenuka.png" alt="Chenuka" class="myImg">
+        </div>
+
+        <div class="mydetails">
+            <h1>Hi I'm Chenuka !</h1>
+            
+            <h2>Student 4</h2>
+            <div class="innerBorder">
+                <h3>The Following pages were created by me:</h3>
+                <a href="svg.html"><h4>SiteMap</h4></a>
+				<a href="Thumbnail.html"><h4>Gallery</h4></a>
+                <a href="Additional Page.html" ><h4>Additional Page</h4></a>
+            </div>
+        </div>
+
+        <div class="back-button">
+            <a href="original_page.html">Back to Previous Page </a>
+        </div>
+    </div>
+</body>
+</html>
