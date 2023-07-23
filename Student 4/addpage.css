@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+
+
+body {
+    font-size: 23px;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: white;
+}
+
+header {
+    padding: 320px 0;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(football.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+    font-size: 75px;
+    font-family:'Times New Roman', Times, serif
+}
+h1{
+    text-align: center;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+p{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.About {
+    margin-top: 100px;
+}
+
+.History {
+    margin-top: 100px;
+}
+.Future{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    border: 2px solid #ccc;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+
+.navbar {
+    background-color:gray ;
+    text-align: center;
+    overflow: hidden;
+    position: relative; 
+    top: 0; 
+    left:0;
+    padding:15px;
+    font-size: larger;
+    
+}
+ .navbar a {
+     padding-right: 30px;
+     color: black;
+     text-decoration: none;
+    
+ }
+ .navbar a:hover{
+    color: white;
+    text-decoration: underline;
+ }
+ .links a {
+    display: inline; 
+    padding:  10px; 
+    text-decoration: none; 
+    color: #333; 
+}
+
+
+.links a:hover {
+    color: blue; 
+}
+
