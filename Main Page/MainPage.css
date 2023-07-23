@@ -1,213 +1,221 @@
-					/* < -----  Navigation Bar & Main Page Styling -----> */
-					
-
-/* ---------- NAV Bar Styling ---------- */
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900");
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 
 
-
-
-* {
-	font-family: sans-serif;
-}
-#heading {
-	text-align: center;
-
+*{
+	scroll-behavior:smooth;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-.logo {
-	cursor: pointer;
-	margin-right: auto;
+body{
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(39, 39, 39);
+    /* padding: 100px; */
 }
 
-li, a, button {
-	font-weight: 700;
-	font-size: 1em;
-	color: #ecf0f1;
-	text-decoration: none;
+#bgvideo {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    
 }
 
-header {
-	border:3px inset rgb(224, 224, 218);
-	border-radius:5px;
-	
-	background-image: url("NaviBarBackground.jpeg");
-	background-size: cover;
-	background-repeat: no-repeat;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 1.875em 10%;
-	
-	
-	 
+@media (min-aspect-ratio: 16/9){
+    #bgvideo{
+        width: 100%;
+        height:auto;
+    }
 }
 
-.navpages {
-	list-style: none;
+@media (max-aspect-ratio: 16/9){
+    #bgvideo{
+        width: auto;
+        height:100%;
+    }
 }
 
-.navpages li:last-of-type{
-	margin-right: 1em;
-	border-right: 0.25em solid white;
-	height: 1.375em; 
+.main-text{
+    display: flex;
+    justify-content: center;
 }
 
-.navpages li{
-	display: inline-block;
-	padding: 0px 1.75em;
-	border-left: 0.25em solid white;
-	height: 1.375em;
-}
-
-.navpages li a {
-	transition: 0.3s ease 0s;
-	text-decoration: underline;
-}
-
-.navpages li a:hover {
-	/* color: #DF7104; */
-	background-color: #93b8b5; color: #ffffff; padding: 15px 25px; 
-}
-
-.navpages li a:active{
-
-	background-color: #ce1313;
-	color: chartreuse;
-}
-
-button {
-	padding: 0.5625em 1.5625em;
-	background-color: #444444;
-	border: none;
-	border-radius: 3.125em;
-	cursor: pointer;
-	transition: 0.3s ease 0s;
-	background-color: #93b8b5; color: #ffffff; 
-	
-}
-
-button:hover {
-	color:#444444;
-	background-color: gray;
-}
-
-/* ---------- Main Page Styling ---------- */
-
-body.homeBody {
-	background-image:url("PageBackground.png");
-	background-size:cover;
-	background-repeat:no-repeat;
-}
-
-
-div.pgdeveloper {
-	margin-top:5%;
-	margin-left:2%;
-	margin-bottom: 2%;
-	
-}
-
-
-.pageimgset1 {
-	display: inline-block;
-	margin-top: 15%; /* adjustment with the fixed position */
-
-}
-.pageimgset2 {
-	display: inline-block;
-
-}
-
-
-
-
-
-
-
-
-/*-------------------------------------------------------------footer----------------------------------------------------------------------*/
-
-.footer{
+#MainText{
+    font-family : "Audiowide";
     position: relative;
-	top:78vh;
-	bottom: 0;
-    float: right;
-	width: 100%;
-	font-family: 'Rubik', sans-serif;
-	padding-top: 40px;
-	padding-bottom: 20px;
-	padding-left: 20px;
-	padding-right: 20px;
-	color:#A5A5A5;
-	margin:0;
-	background-color:rgb(0, 0, 0);
-}
-.footer-content{/* footer main div css */
-	display: flex;
-	flex-direction: row;
-}
-.no-bullet{
-	list-style-type:none;
-	padding-left: 0;
-}
- a {
-	text-decoration: none;
-	color: #A5A5A5;
-}
- a:hover {/* all anchors on hover */
-	text-decoration: none;
-	color: white;
-}
-.text-left{
-	text-align: left ;
-}
-.justify-text{
-	text-align: justify;
-}
-.footer-img{
-	text-align: center;
-	width: 20%;
-}
-.footer-navigation{
-	margin-left: 1px;
-	margin-right: 1px;
-	width: 15%;
-	
-}
-.footer-about{/* about section in footer */
-	width: 45%;
-}
-.footer-contact{/* contact section in footer */
-	text-align: right;
-	margin-left: 1px;
-	margin-right: 1px;
-	width: 15%;
-}
-.footer-hr{
-	color: white;
-	background-color: white;
-	height: 1px;
-	width: 100%;
+    margin: auto;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: auto;
+    /* white-space: nowrap; */
+    font-size: 90px;
+    color: rgba(255, 255, 255, 0.884);   
+    top: 25vh;
+    text-align: center;
 }
 
-.page-credits{/* page credits section */
-	text-align: center;
-	margin-bottom: 0;
+header{
+    margin-bottom: 900px;
 }
 
-.footer .additional .additional-content{/* additional content section */
-	position: relative;
-	text-align: center;
-	left: 35%;
-	margin-bottom: 5px;
-	margin-top: 15px;
-	font-size: 24px;
-	background-color: white;
-	border-radius: 50px;
-	width:30%;
+#explore-button {
+    font-family: "Poppins";
+    font-size: 20px;
+    font-weight: 600;
+    overflow: hidden;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+    display: block;
+    margin-left:auto;
+    margin-right: auto;
+    position: relative;
+    top: 40vh;
+    width: 175px;
+    height: 55px;
+    border: 3px solid rgb(255, 255, 255);
+    background: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 40px;
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.3);
+    transition: 0.3s ease;
 }
 
-#additional-content:hover{
-	color: black;
+#explore-button:hover{
+	color:black;
+	background-color:white;
+	transform:scale(1.2);
+	transition:0.3s ease;
+}
+
+.section-1{
+    width: 700px;
+    height: 400px;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 10px 15px;
+    background-image: url(../Gallery/background.jpg) ;
+    background-size: cover;
+    background-position: center;
+}
+
+.section-1 h1{
+    text-shadow: 1px 1px 20px rgba(0,0,0,0.4);
+    text-align: center;
+    font-family: "Audiowide";
+    font-size: 55px;
+    color: rgb(204, 204, 204);
+}
+
+.flex{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding-bottom: 100px;
 
 }
+
+.text2{
+    font-family : "Audiowide";
+    margin: auto;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: auto;
+    white-space: nowrap;
+    font-size: 75px;
+    color: rgba(255, 255, 255, 0.884);   
+    top: 25vh;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.student1{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(images/Cricket.jpg);
+}
+.student2{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(images/Volleyball.jpg);
+}
+.student3{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(images/Football.jpg);
+}
+.student4{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(images/E-Sports.jpg);
+}
+
+.btn-container {
+    display: flex;
+    margin-top: 100px;
+    justify-content: center;
+    gap: 1rem;
+    display: none;
+    
+}
+  
+  .btn {
+    font-weight: 600;
+    transition: all 300ms ease;
+    font-size: 15px;
+    padding: 1rem;
+    width: 10rem;
+    border-radius: 2rem;
+    color: black;
+    border-color: rgb(163, 163, 163);
+    border: rgb(53, 53, 53) 0.1rem solid;
+  }
+  
+  .btn:hover {
+    cursor: pointer;
+    background: rgb(53, 53, 53);
+    color: white;
+    transform: scale(1.1);
+  }
+
+.section-1:hover .btn-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-1:hover{
+    transform: scale(1.03) ;
+    transition: 0.3s ease;
+}
+
+#back-to-top-btn {
+    font-family: "Poppins";
+    font-size: 20px;
+    font-weight: 600;
+    overflow: hidden;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+    display: block;
+    margin-left:auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+    top: 40vh;
+    width: 175px;
+    height: 55px;
+    border: 3px solid rgb(255, 255, 255);
+    background: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 40px;
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.3);
+    transition: 0.3s ease;
+}
+
+#back-to-top-btn:hover{
+	color:black;
+	background-color:white;
+	transform:scale(1.2);
+	transition:0.3s ease;
+}
+
+

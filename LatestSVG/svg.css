@@ -1,3 +1,68 @@
+*{
+    margin: 0; padding: 0; border: 0; box-sizing: border-box;     /*universal selector for all elements to be alligned*/
+
+}
+
+
+
+.bottomdiv{									/*svg container with height 70vh*/
+    display: flex;
+    height: 70vh;
+    background: linear-gradient(to bottom, #181e1f 0%, #d1cbcb 100%);
+	padding-top: 160px;
+    background-image: url(ring.jpg);
+	
+    
+}
+h1{
+    color: white;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;	
+    font-size: 50px;
+    
+}
+.marginL{
+    margin-left: 100px;
+}
+rect {
+    fill: orange;
+    stroke: black;
+    stroke-width: 5;	/*rect style default color blue and black border design*/
+    opacity: 1;
+    transition: fill 0.3s;
+  }
+
+rect:hover,
+.hoverEff:hover rect {				/*on hover rect turns aqua*/			
+    opacity: 0.6;
+    fill: red;
+    stroke: white;
+    
+}
+.hoverEff:hover .svgText {	/*text within svg turns black*/
+    fill: white;
+}
+
+.svgText{
+    fill:black;
+    font-size:24px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;		/*text within the svg rect and there design*/
+    font-weight: bold;
+    transition: fill 0.3s ;
+}
+.lineDes{
+    fill:none;
+    stroke: yellow;
+    stroke-width: 8px;		/*svg lines properties */
+    stroke-linecap:round;
+}
+.pageEditor{
+	
+	font-size: 20px;
+}
+
+/*-------------footer css ----------*/
+
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
 
 
@@ -23,7 +88,7 @@ footer{
     justify-content: space-between;
     max-width: 1700px;
     margin: auto;
-    /* margin-top: 100px; */
+    
 }
 
 .box_footer{

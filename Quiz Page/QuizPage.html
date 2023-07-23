@@ -1,79 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Quiz-Page</title>
-    <link rel="stylesheet" href="QuizPage.css">
-</head>
-<body>
-    <div class="container">
-        <div class="loader"></div>
-        <header>
-            <div class="Quiztitle">Athletica</div>
-            <div class="question_total">Question: <span id="QuestionNumber"></span> / 10</div>
-        </header>
-        <section>
-            <div class="question">
-                <div id="display-question">QUIZ</div>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Athletica Quiz!!</title>
+
+        <!--Website Favicon -->
+        <link rel="icon" href="../Navigation Bar/logo white blue.png">
+
+        <!--CSS Stylesheets -->
+        <link rel="stylesheet" href="QuizPage.css">
+        <link rel="stylesheet" href="../Footer/Footer.css">
+        <link rel="stylesheet" href="../Navigation Bar/navbar.css">
+
+        <!--Footer Icons-->
+        <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+
+
+    </head>
+    <body onload="NextQuestion(0)">
+        <nav id="top" class="top">
+            <a href="main page 2.html">
+            <img class= "logo" src="../Navigation Bar/logo white blue.png" alt="ATLETICA logo">
+            </a>
+            <!--menu items-->          
+            <ul>
+                <li><a href="../Main Page/MainPage.html">HOME</a></li>
+                <li><a href="../Store/Store.html">Products</a></li>
+                <li><a href="../Quiz Page/QuizMainPage.html" class="selected">QUIZ</a></li>
+                <li><a href="../LatestGallery/Thumbnail.html">GALLERY</a></li>
+                <li><a href="../Gallery/svg.html">SITE MAP</a></li>
+                <li><a href="../Comments Form/Comment Form.html">QUERY FORM</a></li>
+                <li><a href="../Student Details/StudentDetailsPage.html">ABOUT US</a></li>
+            </ul>
+        </nav>
+
+        <main>
+
+            <!-- creating a window for when quiz ends -->
+            <div class="modal-container" id="score-modal">
+
+                <div class="modal-content-container">
+                    <h1>Quiz Ended</h1>
+                    <h1>Congratulations!!</h1>
+
+                    <!-- Details -->
+                    <div class="grade-details">
+                        <p>Wrong Answers : <span id="wrong-answers"></span></p>
+                        <p>Right Answers : <span id="right-answers"></span></p>
+                        <p>Grade : <span id="grade-percentage"></span>%</p>
+                        <p>You took <span id="time-display"></span> seconds to complete the quiz.</p>
+                        <p><span id="remarks"></span></p>
+                    </div>
+
+                    <div class="modal-button-container">
+                        <button
+                            onclick="closeScoreWindow(); location.href='QuizMainPage.html'">Quit</button>
+                    </div>
+                </div>
             </div>
-            <div class="options">
 
-                <div class="modal-container" id="option-modal">
+            <!-- Quiz Container -->
+            <div class="game-quiz-container">
 
-                    <div class="modal-content-container">
-                        <h1>Please Pick An Option</h1>
+                <!-- Timer -->
+                <h1>Time Left: <span id="time-header"></span></h1>
 
-                        <div class="modal-button-container">
-                            <button onclick="closeOptionModal()">Continue</button>
+                <!-- Score and Question Number -->
+                <div class="game-details-container">
+                    <h1>Score : <span id="player-score"></span> / 10</h1>
+                    <h1>Question : <span id="question-number"></span> / 10</h1>
+                </div>
+
+                <!-- Question -->
+                <div class="game-question-container">
+                    <h1 id="display-question">QUIZ</h1>
+                </div>
+
+                <!-- Options -->
+                <div class="game-options-container">
+
+                    <!-- Window to show if no input -->
+                    <div class="modal-container" id="option-modal">
+
+                        <div class="modal-content-container">
+                            <h1>Please Pick An Option</h1>
+
+                            <div class="modal-button-container">
+                                <button onclick="AnswerModal()">Continue</button>
+                            </div>
+
                         </div>
 
                     </div>
 
+                    <!-- Option 1 -->
+                    <span>
+                        <input type="radio" id="option-one" name="option" class="radio" value="optionA">
+                        <label for="option-one" class="option" id="option-one-label"></label>
+                    </span>
+
+                    <!-- Option 2 -->
+                    <span>
+                        <input type="radio" id="option-two" name="option" class="radio" value="optionB">
+                        <label for="option-two" class="option" id="option-two-label"></label>
+                    </span>
+
+                    <!-- Option 3 -->
+                    <span>
+                        <input type="radio" id="option-three" name="option" class="radio" value="optionC">
+                        <label for="option-three" class="option" id="option-three-label"></label>
+                    </span>
+
+                    <!-- Option 4 -->
+                    <span>
+                        <input type="radio" id="option-four" name="option" class="radio" value="optionD">
+                        <label for="option-four" class="option" id="option-four-label"></label>
+                    </span>
+
                 </div>
-                
-                <span>
-                    <input type="radio" id="option-one" name="option" class="radio" value="optionA">
-                    <label for="option-one" class="option" id="optionA"></label>
-                </span>
 
-                <span>
-                    <input type="radio" id="option-two" name="option" class="radio" value="optionB">
-                    <label for="option-two" class="option" id="optionB"></label>
-                </span>
+                <!-- Next Button -->
+                <div class="next-button-container">
+                    <button onclick="promptNextQuestion()">Next Question</button>
+                </div>
 
-                <span>
-                    <input type="radio" id="option-three" name="option" class="radio" value="optionC">
-                    <label for="option-three" class="option" id="optionC"></label>
-                </span>
-
-                <span>
-                    <input type="radio" id="option-four" name="option" class="radio" value="optionD">
-                    <label for="option-four" class="option" id="optionD"></label>
-                </span>
             </div>
-        </section>
+        </main>
+
+        <!-- Footer -->
         <footer>
-            <div class="timer">
-                <div class="time_left_text">Time Left:</div>
-                <div class="time_left" id="time_left">120</div>
+
+            <div class="container_footer">
+                <div class="box_footer">
+                    <div class="logo">
+                        <img src="../Footer/logo white blue.png" alt="">
+                    </div>
+                    <div class="terms">
+                        <p>Athletica is your go-to destination for the latest updates, scores, news, and insights from the thrilling world of sports. Whether you're a fan, athlete, or just love the game, we've got you covered. Stay connected and join the sports community today!</p>
+                    </div>
+                </div>
+                <div class="box_footer">
+                    <h2>Quick Links</h2>
+                    <a href="https://www.google.com">Home Page</a>
+                    <a href="#">Quiz</a>
+                    <a href="#">Gallery</a>
+                    <a href="#">Sitemap</a>
+                    <a href="#">Query Form</a>
+                    <a href="#">About Us</a>
+                </div>
+
+                <div class="box_footer">
+                    <h2>The Team</h2>
+                    <a href="#">Mohamed Aashif</a>
+                    <a href="#">Mohamed Ishrath</a>
+                    <a href="#">Pragash Sasitharan</a>
+                    <a href="#">Chenuka Sarathchandra</a>              
+                </div>
+
+                <div class="box_footer">
+                    <h2>Contact Us</h2>
+                    <a href="https://www.Facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i> Facebook</a>
+                    <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter-square"></i> Twitter</a>
+                    <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i> Linkedin</a>
+                    <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram-square"></i> Instagram</a>
+                </div>
+
             </div>
-            <button class="next_question_btn" onclick="NextQuestion()">Next Question</button>
+
+            <div class="box_copyright">
+                <hr>
+                <p>All rights reserved © 2023 <b>Athletica</b> | Site created by: 
+                <a href="#" style="text-decoration: none; color: aliceblue;">Pragash Sasitharan</a></p>
+            </div>
+
         </footer>
-    </div>
 
-    <div class="result_box">
-        <div class="icon"></div>
-        <h1>Congratulations!!</h1>
-        <div class="score_results">
-            <p id="username"></p>
-            <p>Score: <span id="correct-answers"></span> / 10</p>
-            <p>Time taken: <span id="time_taken"></span> seconds</p>
-            <p><span id="remarks"></span></p>
-        </div>
-    </div>
+        <!-- End of Footer -->
 
-    <script src="QuizPage1.js"></script>
-</body>
-</html>
+        <!-- JavaScript -->
+        <script src="QuizPage.js"></script>
+    </body>
+</html>    

@@ -1,0 +1,114 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.page-title-container {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+
+* {
+    box-sizing: border-box;
+  }
+
+.form-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    width: 1000px;
+}
+
+.form-section, .order-section {
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    display: grid;
+    margin-right: 50px;
+    padding: 20px;
+}
+
+.order-section {
+    max-height: 500px;
+    width: 400px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.payment-section, .billing-section, .contact-details, .billing-address {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+}
+
+
+h2, h3 {
+    color: #333333;
+}
+
+.card-icons {
+    font-size: 40px;;
+}
+
+input, select {
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    padding: 10px;
+}
+
+button {
+    background-color: #000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    height: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 5px 5px;
+}
+
+
+.section-heading {
+    cursor: pointer;
+}
+
+button[disabled]{
+    cursor: not-allowed;
+    color: #000;
+    background-color: #ccc;
+}
+
+.section-heading {
+    cursor: pointer;
+}
+
+.valid {
+    border: 2px solid green;
+}
+
+.invalid {
+    border: 2px solid red;
+}
+.total {
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
+
+.detail-summary {
+    font-weight: bold;
+}
+
+.error-message {
+    color: red;
+}

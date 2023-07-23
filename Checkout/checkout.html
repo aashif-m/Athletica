@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="device-width" initial-scale=1.0">
+        <title>Checkout</title>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="../Navigation Bar/navbar.css">
+        <link rel="stylesheet" href="../Footer/Footer.css">
+    </head>
+    <body>
+      <div class="page-title-container">
+        <nav id="top" class="top">
+          <a href="main page 2.html">
+          <img class= "logo" src="../Navigation Bar/logo white blue.png" alt="ATLETICA logo">
+          </a>
+          <!--menu items-->          
+          <ul>
+              <li><a href="../latest main page/main page 2.html" class="selected">HOME</a></li>
+              <li><a href="../Store/Store.html">Products</a></li>
+              <li><a href="../Quiz Page/QuizMainPage.html">QUIZ</a></li>
+              <li><a href="../LatestGallery/Thumbnail.html">GALLERY</a></li>
+              <li><a href="../Gallery/svg.html">SITE MAP</a></li>
+              <li><a href="../Comments Form/Comment Form.html">QUERY FORM</a></li>
+              <li><a href="../Student Details/StudentDetailsPage.html">ABOUT US</a></li>
+          </ul>
+      </nav>
+      </div>
+    </nav>
+        <form>
+            <div class="container">
+                <div class="form-section">
+                    <div class="billing-section">
+                        <div class="contact-details">
+                            <h3 class="section-heading"><i class='bx bxs-edit-alt' ></i>Contact Details</h3>
+                            <div class="error-message hidden">Please fill out the highlighted fields correctly.</div>
+                            <label for="name">Full Name :</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                            <label for="phone">Phone Number :</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                            <label for="email">Email :</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                            <button type="button" class="save-billing-button">Save </button>
+                        </div>
+                        <div class="billing-address">
+                            <h3 class="section-heading"><i class='bx bxs-edit-alt' ></i>Billing Address</h3>
+                            <div class="error-message hidden">Please fill out the highlighted fields correctly.</div>
+                            <label for="address">Address :</label>
+                            <input type="text" id="address" name="address" placeholder="Enter your address" required>
+                            <label for="city">City :</label>
+                            <input type="text" id="city" name="city" placeholder="Enter your city" required>
+                            <label for="region">Region :</label>
+                            <input type="text" id="region" name="region" placeholder="Enter your region (State/Province)" required>
+                            <label for="country">Country :</label>
+                            <input type="text" id="country" name="country" placeholder="Enter your country" required>
+                            <label for="zip">Zip/Post Code :</label>
+                            <input type="text" id="zip" name="zip" placeholder="Enter your zip/post code" required>
+                            <button type="button" class="save-billing-button">Save </button>
+                        </div>
+                        
+                    </div>
+
+                    <div class="payment-section">
+                        <h3 class="section-heading"><i class='bx bxs-edit-alt' ></i>Payment</h3>
+                        <div class="error-message hidden">Please fill out the highlighted fields correctly.</div>
+                        <label>Accepted Cards :</label>
+                        <div class="card-icons">
+                            <i class='bx bxl-visa'></i>
+                            <i class='bx bxl-mastercard'></i>
+                        </div>
+                        <label for="cardtype">Card Type :</label>
+                        <select id="cardtype" name="cardtype">
+                            <option value="visa">Visa</option>
+                            <option value="mastercard">Mastercard</option>
+                        </select>
+                        <label for="cardname">Name on card :</label>
+                        <input type="text" id="cardname" name="cardname" placeholder="Enter name on the card" required>
+                        <label for="cardnumber">Card number :</label>
+                        <input type="text" id="cardnumber" name="cardnumber" placeholder="Enter card number" required>
+                        <label for="expdate">Expiry Date :</label>
+                        <input type="text" id="expdate" name="expdate" placeholder="Enter expiry date" required>
+                        <label for="cvv">CVV :</label>
+                        <input type="text" id="cvv" name="cvv" placeholder="Enter CVV" required>
+                        <button type="button" class="save-payment-button">Save </button>
+                        
+                    </div>
+                </div>
+
+                <div class="order-section">
+                    <h3>Order Summary</h3>
+                    <div class="detail-summary"></div>
+                    <p class="total">Total: $0</p>
+                    <button class="pay-button" type="button" disabled>Fill the details to pay</button>
+                    <div class="payment-cofirmation hidden"><i class='bx bx-check' style='color:green'  ></i>Payment Successful. Redirecting to home page.</div>
+                </div>
+            </div>
+        </form>
+        <footer>
+
+          <div class="container_footer">
+              <div class="box_footer">
+                  <div class="logo">
+                      <img src="logo white blue.png" alt="">
+                  </div>
+                  <div class="terms">
+                      <p>Athletica is your go-to destination for the latest updates, scores, news, and insights from the thrilling world of sports. Whether you're a fan, athlete, or just love the game, we've got you covered. Stay connected and join the sports community today!</p>
+                  </div>
+              </div>
+              <div class="box_footer">
+                  <h2>Quick Links</h2>
+                  <a href="https://www.google.com">Home Page</a>
+                  <a href="#">Quiz</a>
+                  <a href="#">Gallery</a>
+                  <a href="#">Sitemap</a>
+                  <a href="#">Query Form</a>
+                  <a href="#">About Us</a>
+              </div>
+  
+              <div class="box_footer">
+                  <h2>The Team</h2>
+                  <a href="#">Mohamed Aashif</a>
+                  <a href="#">Mohamed Ishrath</a>
+                  <a href="#">Pragash Sasitharan</a>
+                  <a href="#">Chenuka Sarathchandra</a>              
+              </div>
+  
+              <div class="box_footer">
+                  <h2>Contact Us</h2>
+                  <a href="https://www.Facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i> Facebook</a>
+                  <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter-square"></i> Twitter</a>
+                  <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i> Linkedin</a>
+                  <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram-square"></i> Instagram</a>
+              </div>
+  
+          </div>
+  
+          <div class="box_copyright">
+              <hr>
+              <p>All rights reserved © 2023 <b>Athletica</b> | Site created by: 
+              <a href="#" style="text-decoration: none; color: aliceblue;">Pragash Sasitharan</a></p>
+          </div>
+  
+      </footer>
+        <script src="checkout.js"></script>
+
+        </body>
+        </html>
