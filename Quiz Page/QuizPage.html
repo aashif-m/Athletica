@@ -5,12 +5,18 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Athletica Quiz!!</title>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap">
-        <link rel="icon" type="image/x-icon" href="../Navigation Bar/logo white blue.png">
+
+        <!--Website Favicon -->
+        <link rel="icon" href="../Navigation Bar/logo white blue.png">
+
+        <!--CSS Stylesheets -->
         <link rel="stylesheet" href="QuizPage.css">
         <link rel="stylesheet" href="../Footer/Footer.css">
-        <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="../Navigation Bar/navbar.css">
+
+        <!--Footer Icons-->
+        <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+
 
     </head>
     <body onload="NextQuestion(0)">
@@ -20,9 +26,9 @@
             </a>
             <!--menu items-->          
             <ul>
-                <li><a href="main page 2.html" class="selected">HOME</a></li>
+                <li><a href="../Main Page/MainPage.html">HOME</a></li>
                 <li><a href="../Store/Store.html">Products</a></li>
-                <li><a href="../Quiz Page/QuizMainPage.html">QUIZ</a></li>
+                <li><a href="../Quiz Page/QuizMainPage.html" class="selected">QUIZ</a></li>
                 <li><a href="../LatestGallery/Thumbnail.html">GALLERY</a></li>
                 <li><a href="../Gallery/svg.html">SITE MAP</a></li>
                 <li><a href="../Comments Form/Comment Form.html">QUERY FORM</a></li>
@@ -31,13 +37,15 @@
         </nav>
 
         <main>
-            <!-- creating a modal for when quiz ends -->
+
+            <!-- creating a window for when quiz ends -->
             <div class="modal-container" id="score-modal">
 
                 <div class="modal-content-container">
+                    <h1>Quiz Ended</h1>
+                    <h1>Congratulations!!</h1>
 
-                    <h1>Congratulations, Quiz Completed.</h1>
-
+                    <!-- Details -->
                     <div class="grade-details">
                         <p>Wrong Answers : <span id="wrong-answers"></span></p>
                         <p>Right Answers : <span id="right-answers"></span></p>
@@ -48,26 +56,32 @@
 
                     <div class="modal-button-container">
                         <button
-                            onclick="closeScoreModal(); location.href='QuizMainPage.html'">Quit</button>
+                            onclick="closeScoreWindow(); location.href='QuizMainPage.html'">Quit</button>
                     </div>
                 </div>
             </div>
 
+            <!-- Quiz Container -->
             <div class="game-quiz-container">
 
+                <!-- Timer -->
                 <h1>Time Left: <span id="time-header"></span></h1>
 
+                <!-- Score and Question Number -->
                 <div class="game-details-container">
                     <h1>Score : <span id="player-score"></span> / 10</h1>
                     <h1>Question : <span id="question-number"></span> / 10</h1>
                 </div>
 
+                <!-- Question -->
                 <div class="game-question-container">
                     <h1 id="display-question">QUIZ</h1>
                 </div>
 
+                <!-- Options -->
                 <div class="game-options-container">
 
+                    <!-- Window to show if no input -->
                     <div class="modal-container" id="option-modal">
 
                         <div class="modal-content-container">
@@ -81,24 +95,25 @@
 
                     </div>
 
+                    <!-- Option 1 -->
                     <span>
                         <input type="radio" id="option-one" name="option" class="radio" value="optionA">
                         <label for="option-one" class="option" id="option-one-label"></label>
                     </span>
 
-
+                    <!-- Option 2 -->
                     <span>
                         <input type="radio" id="option-two" name="option" class="radio" value="optionB">
                         <label for="option-two" class="option" id="option-two-label"></label>
                     </span>
 
-
+                    <!-- Option 3 -->
                     <span>
                         <input type="radio" id="option-three" name="option" class="radio" value="optionC">
                         <label for="option-three" class="option" id="option-three-label"></label>
                     </span>
 
-
+                    <!-- Option 4 -->
                     <span>
                         <input type="radio" id="option-four" name="option" class="radio" value="optionD">
                         <label for="option-four" class="option" id="option-four-label"></label>
@@ -106,12 +121,15 @@
 
                 </div>
 
+                <!-- Next Button -->
                 <div class="next-button-container">
                     <button onclick="promptNextQuestion()">Next Question</button>
                 </div>
 
             </div>
         </main>
+
+        <!-- Footer -->
         <footer>
 
             <div class="container_footer">
@@ -158,6 +176,10 @@
             </div>
 
         </footer>
+
+        <!-- End of Footer -->
+
+        <!-- JavaScript -->
         <script src="QuizPage.js"></script>
     </body>
 </html>    

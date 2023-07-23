@@ -351,13 +351,13 @@ function handleEndGame() {
     document.getElementById('grade-percentage').innerHTML = playerGrade
     document.getElementById('wrong-answers').innerHTML = wrongAttempt
     document.getElementById('right-answers').innerHTML = playerScore
-    document.getElementById('time-display').innerHTML = 100 - secondsLeft;
+    document.getElementById('time-display').innerHTML = 120 - secondsLeft;
     document.getElementById('score-modal').style.display = "flex"
 
 }
 
 //closes score modal and resets game
-function closeScoreModal() {
+function closeScoreWindow() {
     questionNumber = 1
     playerScore = 0
     wrongAttempt = 0

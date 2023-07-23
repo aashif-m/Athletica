@@ -10,8 +10,9 @@
 }
 
 main{
-    height: 80vh;
+    height: 90vh;
     padding-top: 50px;
+    padding-bottom: 50px;
     font-family: 'Bebas Neue', sans-serif;
 }
 
@@ -49,13 +50,17 @@ body{
     padding: 12px 26px;
     position: absolute;
     text-decoration: none #000000 solid;
-    text-decoration-thickness: auto;
     width: 100%;
     max-width: 500px;
     cursor: pointer;  
     top: 80%;
     left: 50%;
     transform: translate(-50%, -50%); /* Center the button both horizontally and vertically */
+}
+
+hr{
+    width: 90%;
+    margin: auto;
 }
    
   
