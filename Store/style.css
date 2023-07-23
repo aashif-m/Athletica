@@ -87,7 +87,7 @@ justify-content: center;
 align-items: center;
 }
 
-.order-form h2 {
+.order-form h2, .order-form h3 {
 text-align: center;
 }
 
@@ -148,4 +148,9 @@ button {
 
 .hidden {
   display: none;
+}
+
+hr {
+  margin-top : 5px;
+  margin-bottom: 5px;
 }
