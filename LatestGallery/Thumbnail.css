@@ -1,15 +1,17 @@
+
+/*Gallery page CSS*/
 h1{
     margin-bottom: auto;
     text-align: center;
     font-size: 40px;
     font-family: 'Roboto', sans-serif;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);  
 
 }
 
 body{
     background-color:black;
-    transition: background-color 0.5s, color 0.5s;
+    transition: background-color 0.5s, color 0.5s;   /*Body styling*/
     margin-top: 50px;
     
 }
@@ -37,7 +39,7 @@ body{
     position: relative;
     float: right;
     
-}
+}											/*button position shift to right and is releative to the h1 pos*/
 #TxtSize{
     position: relative;
     float: right;
@@ -56,7 +58,7 @@ body{
 }
 
 .buttonMain:hover {
-    transform: translateY(-2px);
+    transform: translateY(-2px);							/*button styling*/
     opacity: 0.8; 
 }
 .hoverEff:hover{
@@ -67,20 +69,30 @@ body{
 }
 .image-container {
     margin-left: 20px;
+	
 }
 .hoverEff{
     margin: 0 50px;
     transition: transform 0.3s ease-in-out;
 }
-div p{
+.image-container p{
     font-family: fantasy;
     font-size: 15px;
     margin-left: 170px;
+	margin-bottom: 2px;
+	
 }
+.horizontalImg p{
+    font-family: fantasy;
+    font-size: 15px;
+    margin-left: 170px;
+	margin-bottom: 2px;
+}
+
 .image-container img {
     border: 2px solid orange; 
     border-radius: 10px; 
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 					/*Images in Webpage Style including border and hover effects*/
 }
 .horizontalImg{
     display: flex;
@@ -96,17 +108,11 @@ div p{
     
 
 }
-footer a{
-	font-size: 25px;
-	margin-left: 30px;
-	color: cyan;
-	text-decoration: underline;
-	
-}
+
 
 .imageBorder {
     color: white;
-    position: relative;
+    position: relative;           /*image border to hold the ImgContent and the modal background color will be positioned according to the #Border*/
     display: none;
     z-index: 1;
     width: 1100px;
@@ -118,8 +124,7 @@ footer a{
     
 }
 #Border {
-
-    position: absolute;
+    position: absolute;   /*Positioning the Modal to be printed in the center*/
     top:280px;
     left: 500px;
 }
@@ -127,7 +132,7 @@ footer a{
 .Imgcontent{
     max-width: 900px;
     max-height: 425px;
-    margin: 2px 0px 30px 10px;
+    margin: 2px 0px 30px 10px;  /*image properties within the opened imageBorder*/
     width: 50%;
     display: flex;
     text-align: right;
@@ -135,169 +140,14 @@ footer a{
 }
 #ImgDescription {
     text-align: center;
-    margin-top: 100px;
+    margin-top: 100px;      /*positioning the alt image text to print the description of the image*/
     font-size: 18px;
     font-family: 'Roboto', sans-serif;
 
 } 
-.imageBorder img{
+.imageBorder img{  /*text floated to the left hand side of the modal  and se*/
     float: left;
     width: 650px;
     height: 420px;
    
-}
-@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
-*{
-	padding:0;
-	margin:0;
-	text-decoration:none;
-	list-style:none;
-	box-sizing:border-box;
-	
-}
-
-.selected{
-	background-color: #ffffff;
-	color: black;
-}
-
-
-nav{
-	display: flex;
-	background-color: rgba(0,0,0,0.5);
-	height:95px auto;
-	width:100%;
-	overflow: hidden;
-	font-family: 'Audiowide', cursive;
-	
-}
-.logo{
-	line-height:80px;
-	padding:0 auto;
-	width:75px;
- 	padding: 10px;
-	margin-left: 20px;
-	padding-bottom: 5px;
-	margin-top: 10px;
-}
-
-nav ul{
-	position: relative;
-    margin-top: 7px;
-	margin-right:10px;
-	margin-left: auto;
-	float: right;
-	/* left: 929.5px;
-	bottom: 73px; */
-}
-
-nav ul li{
-	display:inline-block;
-	line-height:80px;
-	margin:0 5px;
-}
-
-nav ul li a{
-    font-family : 'Audiowide';
-	color:white;
-	font-size:17px;
-	padding:10px 20px;
-	border-radius:40px;
-	font-weight:520;
-	text-transform:uppercase;
-	transition: 1s;
-}
-
-nav ul li a:hover{
-	background:#ffffff;
-	color: black;
-}
-
-/*--footer ---*/
-
-.footer{
-    position: relative;
-	top:8vh;
-	bottom: 0;
-    float: right;
-	width: 100%;
-	font-family: 'Rubik', sans-serif;
-	padding-top: 40px;
-	padding-bottom: 10px;
-	padding-left: 20px;
-	padding-right: 20px;
-	color:#A5A5A5;
-	margin:0;
-	background-color:rgb(0, 0, 0);
-}
-.footer-content{/* footer main div css */
-	display: flex;
-	flex-direction: row;
-}
-.no-bullet{
-	list-style-type:none;
-	padding-left: 0;
-}
- a {
-	text-decoration: none;
-	color: #A5A5A5;
-}
- a:hover {/* all anchors on hover */
-	text-decoration: none;
-	color: white;
-}
-.text-left{
-	text-align: left;
-}
-.justify-text{
-	text-align: justify;
-}
-.footer-img{
-	text-align: center;
-	width: 10%;
-	margin-right: 5%;
-	margin-top: 1%;
-}
-.footer-navigation{
-	margin-left: 1px;
-	margin-right: 1px;
-	width: 15%;
-	
-}
-.footer-about{/* about section in footer */
-	width: 45%;
-}
-.footer-contact{/* contact section in footer */
-	text-align: right;
-	margin-left: 1px;
-	margin-right: 1px;
-	width: 15%;
-}
-.footer-hr{
-	color: white;
-	background-color: white;
-	height: 1px;
-	width: 100%;
-}
-
-.page-credits{/* page credits section */
-	text-align: center;
-	margin-bottom: 0;
-}
-
-.footer .additional .additional-content{/* additional content section */
-	position: relative;
-	text-align: center;
-	left: 35%;
-	margin-bottom: 5px;
-	margin-top: 15px;
-	font-size: 24px;
-	background-color: white;
-	border-radius: 50px;
-	width:30%;
-}
-
-#additional-content:hover{
-	color: black;
-
 }
