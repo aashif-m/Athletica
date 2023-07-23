@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>ATHLETICA QUERY FORM</title>
+
+      <!--Linking the page icon-->
+      <link rel="icon" href="logo white blue.png">
+
+      <!--Linking with query form stylesheet-->
+      <link rel="stylesheet"  href="Query.css">
+
+      <!--Linking with the javascript file-->
+      <script defer src="Query.js"></script>
+
+
+
+  </head>
+  <body>
+
+
+      <!-- Start of query form -->
+      <div class="container">
+          <div>
+              <img src="logo white blue.png" alt="ATHLETICA Logo" id="ATHLETICALogo" width="100">
+          </div>
+          <form class ="form" id="form" name="form" action="previewQuery.html" onsubmit="return validate()" method="get" >
+              <div class="title">
+                  Query Form
+              </div>
+              <div class="input-box">
+                  <label>Your Name</label>
+                  <input type="text" name="name" id="name" class="user-input" placeholder="First and Last name">
+              </div>
+              <div class="input-box">
+                  <label>Your Email</label>
+                  <input type="text" name="email" id="email" class="user-input" placeholder="example@email.com">
+              </div>
+              <div class="input-box">
+                  <label>Subject</label>
+                  <div class="input-select">
+                  <select name="subject" id="subject">
+                      <option value="">Select</option>
+                      <option value="Feedback">Feedback</option>
+                      <option value="Delivery">Delivery</option>
+                      <option value="Warranty">Warranty</option>
+                      <option value="Custom Orders">Custom Orders</option>
+                  </select>
+                  </div>
+              </div> 
+              <div class="input-box">
+                  <label>Query Details</label>
+                  <textarea class="query-input" name="message" id="message" placeholder="Enter your message..."></textarea>
+              </div> 
+              <div class="submit-box">
+                  <input type="submit" class="button" value="Next >">
+              </div>
+          </form>
+
+      </div>
+      <!-- End of query form -->
+
+      
+  </body>
+</html>
