@@ -99,6 +99,106 @@ const questions = [
         correctOption: "optionB"
     },
 
+    {
+        //Question 11
+        question: "In which e-sport do players control characters known as 'heroes' to destroy the opposing team's Ancient?",
+        optionA: " Counter-Strike: Global Offensive (CS:GO)",
+        optionB: "Dota 2",
+        optionC: "League of Legends (LoL)",
+        optionD: "Overwatch",
+        correctOption: "optionB"
+    },
+
+    {
+        //Question 12
+        question: "How many players are there on a standard soccer (football) team on the field during gameplay?",
+        optionA: "Five",
+        optionB: "Six",
+        optionC: "Seven",
+        optionD: "Eight",
+        correctOption: "optionB"
+    },
+
+    {
+        //Question 13
+        question: "In which sport would you use the term 'slam dunk'?",
+        optionA: "Basketball",
+        optionB: "Soccer (Football)",
+        optionC: "Baseball",
+        optionD: "Ice Hockey",
+        correctOption: "optionA"
+    },
+
+    {
+        //Question 14
+        question: "In which country was the sport of basketball invented?",
+        optionA: "Canada",
+        optionB: "United States",
+        optionC: "England",
+        optionD: "Brazil",
+        correctOption: "optionB"
+    },
+
+    {
+        //Question 15
+        question: "Which country won the first-ever FIFA Women's World Cup held in 1991?",
+        optionA: "Germany",
+        optionB: "United States",
+        optionC: "Brazil",
+        optionD: "Norway",
+        correctOption: "optionD"
+    },
+
+    {
+        //Question 16
+        question: "In the game 'Fortnite,' what is the popular in-game dance emote that became a cultural phenomenon?",
+        optionA: "Orange Justice",
+        optionB: "Floss Dance",
+        optionC: "Take the L",
+        optionD: "The Robot",
+        correctOption: "optionB"
+    },
+
+    {
+        //Question 17
+        question: "Which e-sport game involves players controlling tanks and fighting in a team-based environment?",
+        optionA: "World of Tanks",
+        optionB: "World of Warcraft",
+        optionC: "World of Warships",
+        optionD: "World of Warcraft",
+        correctOption: "optionA"
+    },
+
+    {
+        //Question 18
+        question: "Which Sri Lankan batsman scored the highest individual score in Test cricket?",
+        optionA: "Sanath Jayasuriya",
+        optionB: "Kumar Sangakkara",
+        optionC: "Aravinda de Silva",
+        optionD: "Mahela Jayawardene",
+        correctOption: "optionB"
+    },
+
+    {
+        //Question 19
+        question: "In which year did Sri Lanka win the ICC T20 World Cup (formerly ICC World Twenty20)?",
+        optionA: "2007",
+        optionB: "2009",
+        optionC: "2011",
+        optionD: "2014",
+        correctOption: "optionA"
+    },
+
+    {
+        //Question 20
+        question: "Who was the captain of the Sri Lankan cricket team when they won the ICC Cricket World Cup in 1996?",
+        optionA: "Sanath Jayasuriya",
+        optionB: "Arjuna Ranatunga",
+        optionC: "Kumar Sangakkara",
+        optionD: "Muttiah Muralitharan",
+        correctOption: "optionB"
+    },
+
 ]
 
 
@@ -120,7 +220,7 @@ let playerScore = 0
 let wrongAttempt = 0 
 let indexNumber = 0
 
-let secondsLeft = 100;
+let secondsLeft = 120;
 
 const timer = setInterval(function() {
   secondsLeft--;
@@ -129,7 +229,7 @@ const timer = setInterval(function() {
   if (secondsLeft === 0) {
     clearInterval(timer);
     alert("Time's up!");
-    window.location.href = "../../Student_2/Quiz-ThumnailPage/Quiz_thumbnail.html";
+    handleEndGame();
   }
 }, 1000);
 
@@ -232,19 +332,6 @@ function handleEndGame() {
     let remarkColor = null
 
     // condition check for player remark and remark color
-    // if (playerScore <= 3) {
-    //     remark = "Bad Grades, Keep Practicing."
-    //     remarkColor = "red"
-    // }
-    // else if (playerScore >= 4 && playerScore < 7) {
-    //     remark = "Average Grades, You can do better."
-    //     remarkColor = "orange"
-    // }
-    // else if (playerScore >= 7) {
-    //     remark = "Excellent, Keep the good work going."
-    //     remarkColor = "green"
-    // }
-
     if(playerScore > 7){
         remark = "Excellent 🥳, Keep working hard!!"
         remarkcolor = "green"

@@ -21,11 +21,13 @@
         <script defer src="Main.js"></script>
 
         <!-- Linking the background video -->
-        <!-- <video id="bgvideo" autoplay muted loop >
+        <video id="bgvideo" autoplay muted loop >
             <source src="introvedio.mp4">
-        </video> -->
+        </video>
         <!--Linking with footer stylesheet-->
-        <link rel="stylesheet"  href="footer.css">
+        <link rel="stylesheet"  href="../Footer/Footer.css">
+
+        <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <!-- back to top button -->
@@ -33,18 +35,18 @@
 
         <!-- All navigation bar contents -->
         <nav id="top" class="top">
-        <a href="home.html">
+        <a href="main page 2.html">
         <img class= "logo" src="logo white blue.png" alt="ATLETICA logo">
         </a>
             <!--menu items-->          
             <ul>
-                <li><a href="home.html" class="selected">HOME</a></li>
+                <li><a href="main page 2.html" class="selected">HOME</a></li>
                 <li><a href="../Store/Store.html">Products</a></li>
                 <li><a href="../Comments Form/Comment Form.html">QUERY FORM</a></li>
                 <li><a href="../Quiz Page/QuizMainPage.html">QUIZ</a></li>
-                <li><a href="GalleryAndSiteMap/Gallery/gallery.html">GALLERY</a></li>
-                <li><a href="GalleryAndSiteMap/SVG/sitemap.html">SITE MAP</a></li>
-                <li><a href="QuizAndAboutUs/Aboutus/Aboutus.html">ABOUT US</a></li>
+                <li><a href="../LatestGallery/Thumbnail.html">GALLERY</a></li>
+                <li><a href="../Gallery/svg.html">SITE MAP</a></li>
+                <li><a href="../Student Details/StudentDetailsPage.html">ABOUT US</a></li>
             </ul>
         </nav>
 
@@ -64,7 +66,7 @@
                 <div class="categories-title">
                     <h1>CRICKET</h1>
                     <div class="btn-container">
-                        <button class="btn" onclick="location.href='https://github.com/'">
+                        <button class="btn" onclick="location.href='../Additional Pages/E-Sports/E-Sports.html'">
                           Learn More
                         </button>
                     </div>
@@ -97,7 +99,7 @@
                 <div class="categories-title">
                     <h1>E-SPORTS</h1>
                     <div class="btn-container">
-                        <button class="btn" onclick="location.href='https://github.com/'">
+                        <button class="btn" onclick="location.href='../Additional Pages/E-Sports/E-Sports.html'">
                           Learn More
                         </button>
                     </div>
@@ -107,66 +109,56 @@
 
 
             </div>
-            
+            <button id="back-to-top-btn">Back TO TOP<span></span></button>
         <!-- end category section -->
 
 
         <!-- ------------------------------------------------website footer----------------------------------------------- -->
-        <div class="footer">
-            <div class="footer-content">
-            <div class="footer-img">
-                <!-- website logo in footer -->
-                <a href="home.html">
-                <img src="logo white blue.png" alt="footer logo" width="55%" role="img" aria-label="link to home page"/></a>
+        <footer>
+
+            <div class="container_footer">
+                <div class="box_footer">
+                    <div class="logo">
+                        <img src="../Footer/logo white blue.png" alt="">
+                    </div>
+                    <div class="terms">
+                        <p>Athletica is your go-to destination for the latest updates, scores, news, and insights from the thrilling world of sports. Whether you're a fan, athlete, or just love the game, we've got you covered. Stay connected and join the sports community today!</p>
+                    </div>
+                </div>
+                <div class="box_footer">
+                    <h2>Quick Links</h2>
+                    <a href="https://www.google.com">Home Page</a>
+                    <a href="#">Quiz</a>
+                    <a href="#">Gallery</a>
+                    <a href="#">Sitemap</a>
+                    <a href="#">Query Form</a>
+                    <a href="#">About Us</a>
+                </div>
+    
+                <div class="box_footer">
+                    <h2>The Team</h2>
+                    <a href="#">Mohamed Aashif</a>
+                    <a href="#">Mohamed Ishrath</a>
+                    <a href="#">Pragash Sasitharan</a>
+                    <a href="#">Chenuka Sarathchandra</a>              
+                </div>
+    
+                <div class="box_footer">
+                    <h2>Contact Us</h2>
+                    <a href="https://www.Facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i> Facebook</a>
+                    <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter-square"></i> Twitter</a>
+                    <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i> Linkedin</a>
+                    <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram-square"></i> Instagram</a>
+                </div>
+    
             </div>
-            <div class="footer-navigation text-left" role="navigation" aria-label="Main">
-                <h2>Navigation</h2>
-                <!-- footer navigation -->
-                <ul class="no-bullet">
-                    <li><a href="home.html" ><br>HOME</a></li>
-                    <li><a href="PresentationPage and Shop/store.html">PRODUCTS</a></li>
-                    <li><a href="query_form/queryForm.html">QUERY FORM</a></li>
-                    <li><a href="QuizAndAboutUs/Quiz/Quiz.html">QUIZ</a></li>
-                    <li><a href="GalleryAndSiteMap/Gallery/gallery.html">GALLERY</a></li>
-                    <li><a href="GalleryAndSiteMap/SVG/sitemap.html">SITE MAP</a></li>
-                    <li><a href="QuizAndAboutUs/Aboutus/Aboutus.html">ABOUT US</a></li>
-                </ul>
+    
+            <div class="box_copyright">
+                <hr>
+                <p>All rights reserved © 2023 <b>Athletica</b> | Site created by: 
+                <a href="#" style="text-decoration: none; color: aliceblue;">Pragash Sasitharan</a></p>
             </div>
-            <div class="footer-about">
-                <!-- footer about area -->
-                <h2>WHO WE ARE & WHY WE’RE HERE</h2>
-                <p class="justify-text">
-                    <br>
-                We created this website for our course work in web module.
-                <br/>
-                This site contains information about different sports,
-                with detailed descriptions and images which will help you to get a rough idea about some selected sports.
-                <br/>
-                Also we have some unique, quality sport equipments  made all around the world
-                for the lowest rates.
-                </p>
-            </div>
-            <div class="footer-contact">
-                <!-- footer contact info -->
-                <h2><strong>Contact Info</strong></h2>
-                <p>
-                +94 781855653 <br /><br />
-                ATLETICA <br />
-                No 25, <br />
-                Galle Road,<br />
-                Galle.
-                </p>
-            </div>
-            </div>
-            <br>
-            <hr class="footer-hr">
-            <div class="footer-content">
-            </div>
-            <hr class="footer-hr">
-            <!-- page credits-link to page editor page and additional content -->
-            <div class="additional">
-            <p class="page-credits"><br> <br> <a href="QuizAndAboutUs/Aboutus/Aboutus.html">Page Editor</a></p>
-            </div>
-        </div>
+    
+        </footer>
     </body>
 </html>
