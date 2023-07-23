@@ -3,85 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <title>Tutorial 3</title>
-    <style>
+    <link rel="stylesheet" href="addpage.css">
+    <link rel="stylesheet" href="../Navigation Bar/navbar.css">
+    <link rel="stylesheet" href="../Footer/Footer.css">
     
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
-
-
-        body {
-            font-size: 23px;
-            margin: 0;
-            padding: 0;
-            font-family: 'Roboto', sans-serif;
-            background-color: white;
-        }
-        
-        header {
-            padding: 320px 0;
-            background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(football.jpeg);
-            background-repeat: no-repeat;
-            background-size: cover;
-            text-align: center;
-            color: #fff;
-            font-size: 75px;
-            font-family:'Times New Roman', Times, serif
-        }
-        h1{
-            text-align: center;
-            font-size: 40px;
-            text-transform: uppercase;
-        }
-        p{
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        .About {
-            margin-top: 100px;
-        }
-
-        .History {
-            margin-top: 100px;
-        }
-        .Future{
-            margin-top: 100px;
-        }
-
-        .container {
-            display: flex;
-            justify-content: center;
-            border: 2px solid #ccc;
-            padding: 20px;
-            margin-top: 10px;
-        }
-        
-        
-        .navbar {
-            background-color:gray ;
-            text-align: center;
-            overflow: hidden;
-            position: relative; 
-            top: 0; 
-            left:0;
-        
-             padding:15px;
-            font-size: larger;
-            
-        }
-         .navbar a {
-             padding-right: 30px;
-             color: black;
-             text-decoration: none;
-            
-         }
-         .navbar a:hover{
-            color: white;
-            text-decoration: underline;
-         }
-    
-
-    </style>
+   
 </head>
 <body>
+    <nav id="top" class="top">
+        <a href="main page 2.html">
+        <img class= "logo" src="../Navigation Bar/logo white blue.png" alt="ATLETICA logo">
+        </a>
+            <!--menu items-->          
+            <ul>
+                <li><a href="main page 2.html" class="selected">HOME</a></li>
+                <li><a href="../Store/Store.html">Products</a></li>
+                <li><a href="../Comments Form/Comment Form.html">QUERY FORM</a></li>
+                <li><a href="../Quiz Page/QuizMainPage.html">QUIZ</a></li>
+                <li><a href="../LatestGallery/Thumbnail.html">GALLERY</a></li>
+                <li><a href="../Gallery/svg.html">SITE MAP</a></li>
+                <li><a href="../Student Details/StudentDetailsPage.html">ABOUT US</a></li>
+            </ul>
+        </nav>
     <header id="Scrollup">FOOTBALL</header>
 
     <div class="navbar">
@@ -89,8 +32,6 @@
         <a  href="#history"> History of Football</a>
         <a  href="#future"> Future of Football</a>
         <a href="#scrollD"> Scroll To Bottom</a>
-        
-       
     </div>
 
     
@@ -138,11 +79,63 @@
 
 
     <br>
-    <a href="#Scrollup">&#11014 Back to the Top</a>
-    <a href="MainPage.html"> Back to Main Page</a>
-
+    <div class="links">
+        <a class="scroll" href="#Scrollup">&#11014 Back to the Top</a>
+        <a href="../Main Page/MainPage.html"> Back to Main Page</a>
+    </div>
     <hr>
-    <footer id="scrollD"></footer>
+    
+        <!-- ------------------------------------------------website footer----------------------------------------------- -->
+        <footer id="scrollD">
+
+            <div class="container_footer">
+                <div class="box_footer">
+                    <div class="logo">
+                        <img src="../Footer/logo white blue.png" alt="">
+                    </div>
+                    <div class="terms">
+                        <p>Athletica is your go-to destination for the latest updates, scores, news, and insights from the thrilling world of sports. Whether you're a fan, athlete, or just love the game, we've got you covered. Stay connected and join the sports community today!</p>
+                    </div>
+                </div>
+                <div class="box_footer">
+                    <h2>Quick Links</h2>
+                    <a href="https://www.google.com">Home Page</a>
+                    <a href="#">Quiz</a>
+                    <a href="#">Gallery</a>
+                    <a href="#">Sitemap</a>
+                    <a href="#">Query Form</a>
+                    <a href="#">About Us</a>
+                </div>
+    
+                <div class="box_footer">
+                    <h2>The Team</h2>
+                    <a href="#">Mohamed Aashif</a>
+                    <a href="#">Mohamed Ishrath</a>
+                    <a href="#">Pragash Sasitharan</a>
+                    <a href="#">Chenuka Sarathchandra</a>              
+                </div>
+    
+                <div class="box_footer">
+                    <h2>Contact Us</h2>
+                    <a href="https://www.Facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i> Facebook</a>
+                    <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter-square"></i> Twitter</a>
+                    <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i> Linkedin</a>
+                    <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram-square"></i> Instagram</a>
+                </div>
+    
+            </div>
+    
+            <div class="box_copyright">
+                <hr>
+                <p>All rights reserved © 2023 <b>Athletica</b> | Site created by: 
+                <a href="#" style="text-decoration: none; color: aliceblue;">Pragash Sasitharan</a></p>
+            </div>
+    
+        </footer>
+    </body>
+</html>
+
+    
 
    
 </body>
