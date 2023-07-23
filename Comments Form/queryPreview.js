@@ -3,18 +3,22 @@ window.addEventListener('load',()=>{
 	const params = (new URL (document.location)).searchParams;
 	const name = params.get('name');
 	const email= params.get('email');
-	const subject= params.get('subject');
-	const message= params.get('message');
+	const reason= params.get('reason');
+	const willingmode= params.get('willingmode');
+	const usedmode= params.get('usedmode');
 	
 	document.getElementById('name-preview').innerHTML = name;
 	document.getElementById('email-preview').innerHTML = email;
-	document.getElementById('subject-preview').innerHTML = subject;
-	document.getElementById('message-preview').innerHTML = message;
+	document.getElementById('reason-preview').innerHTML = reason;
+	document.getElementById('usedmode-preview').innerHTML = usedmode;
+	document.getElementById('willingmode-preview').innerHTML = willingmode;
+	
+	
 })
 
 function send() //fuction to intiate with 'send' button - sending email
 {
-    window.location.href="mailto:kavindu20210886@iit.ac.lk";
+    window.location.href="mailto:isyathu20222219@iit.ac.lk";
 }
 
 function edit()//function to initiate with 'edit' button - going back
@@ -24,6 +28,6 @@ function edit()//function to initiate with 'edit' button - going back
 			window.history.go(-1);
 		}
 	}catch(e){
-		window.location.href="queryForm.html";
+		window.location.href="Query.html";
 	}
 }

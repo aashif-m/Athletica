@@ -2,11 +2,14 @@ function validate()
 {
     var name=document.getElementById('name').value;
 	var email=document.getElementById('email').value;
-	var subject=document.getElementById('subject').value;
-	var message=document.getElementById('message').value;
+    var reason=document.getElementById('reason').value;
+    var usedmode=document.getElementById('usedmode').value;
+	var willingmode=document.getElementById('willingmode').value;
+
+	
 
 	//if there are missing fields
-	if(name=="" || email=="" || subject=="" || message==""){
+	if(name=="" || email=="" || reason==""  || usedmode=="" || willingmode==""){
 		alert("Please fill all the fields...")
 		return false;
 	}

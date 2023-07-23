@@ -13,7 +13,8 @@
       <link rel="stylesheet"  href="Query.css">
 
       <!--Linking with the javascript file-->
-      <script defer src="Query.js"></script>
+      <script defer src="queryForm.js"></script>
+
 
 
 
@@ -30,6 +31,13 @@
               <div class="title">
                   Query Form
               </div>
+            
+
+              
+
+
+
+
               <div class="input-box">
                   <label>Your Name</label>
                   <input type="text" name="name" id="name" class="user-input" placeholder="First and Last name">
@@ -38,25 +46,63 @@
                   <label>Your Email</label>
                   <input type="text" name="email" id="email" class="user-input" placeholder="example@email.com">
               </div>
+
+              <label style="color: white;"> Rate US</label>
+
+              <div class="input-box" >
+                  <label> 0<br><input type="radio" name="option" value="0"></label>
+                  <label> 1<br><input type="radio" name="option" value="1"></label>
+                  <label> 2<br><input type="radio" name="option" value="2"></label>
+                  <label> 3<br><input type="radio" name="option" value="3"></label>
+                  <label> 4<br><input type="radio" name="option" value="4"></label>
+                  <label> 5<br><input type="radio" name="option" value="5"></label>
+                  <label> 6<br><input type="radio" name="option" value="6"></label>
+                  <label> 7<br><input type="radio" name="option" value="7"></label>
+                  <label> 8<br><input type="radio" name="option" value="8"></label>
+                  <label> 9<br><input type="radio" name="option" value="9"></label>
+                  <label> 10<br><input type="radio" name="option" value="10"></label>
+              </div>
+
               <div class="input-box">
-                  <label>Subject</label>
+                <label>Reason</label>
+                <textarea class="query-input" name="reason" id="reason" placeholder="Enter your reason..."></textarea>
+              </div> 
+
+
+              <div class="input-box">
+                  <label>Used mode to complete</label>
                   <div class="input-select">
-                  <select name="subject" id="subject">
+                  <select name="usedmode" id="usedmode">
                       <option value="">Select</option>
-                      <option value="Feedback">Feedback</option>
-                      <option value="Delivery">Delivery</option>
-                      <option value="Warranty">Warranty</option>
-                      <option value="Custom Orders">Custom Orders</option>
+                      <option value="Phone">Phone</option>
+                      <option value="Website">Website</option>
+                      <option value="Webchat">Webchat</option>
+                      <option value="Social media">Social media</option>
+                      <option value="Email">Email</option>
+
                   </select>
                   </div>
               </div> 
+
               <div class="input-box">
-                  <label>Query Details</label>
-                  <textarea class="query-input" name="message" id="message" placeholder="Enter your message..."></textarea>
-              </div> 
-              <div class="submit-box">
-                  <input type="submit" class="button" value="Next >">
-              </div>
+                <label>Willing mode to complete</label>
+                <div class="input-select">
+                <select name="willingmode" id="willingmode">
+                    <option value="">Select</option>
+                    <option value="Phone">Phone</option>
+                    <option value="Website">Website</option>
+                    <option value="Webchat">Webchat</option>
+                    <option value="Social media">Social media</option>
+                    <option value="Email">Email</option>
+
+                </select>
+                </div>
+            </div> 
+
+             
+            <div class="submit-box">
+                <input type="submit" class="button" value="Next >">
+            </div>
           </form>
 
       </div>
