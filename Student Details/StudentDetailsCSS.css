@@ -5,6 +5,13 @@ body{
   background-size: cover;
 }
 
+.Title{
+  color: white;
+  text-align: center; 
+  padding-top: 70px;
+  font-size: 80px;
+}
+
 .student_details {
   align-items: center;
   background-color: #f2f2f2;
@@ -13,13 +20,13 @@ body{
   flex-wrap: wrap;
   justify-content: center;
   min-height: 600px;
-  margin: 100px;
+  margin: 70px;
   max-width: 100%;
   border: 10px black solid;
   border-radius: 20px;
-  padding-top: -300px;
-  
+  padding-top: -300px; 
 }
+
 .person {
   align-items: center;
   display: flex;
@@ -28,6 +35,7 @@ body{
   margin: 0 30px;
   margin-top: -100px;
 }
+
 .container {
   border-radius: 50%;
   height: 312px;

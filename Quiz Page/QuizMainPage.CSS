@@ -1,32 +1,31 @@
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 .Instructions-box {
-    height: 400px;
-    width: 415px;
+    height: 470px;
+    width: 550px;
     margin: 20px auto;
     margin-top: 20px;
     border-radius: 10px;   /* for the circular effect border */
     background-color: #B9f158;
 }
 
-
-* {
-    margin:0;
-    padding: 0;
-    box-sizing: border-box;
+main{
+    height: 80vh;
+    padding-top: 50px;
+    font-family: 'Bebas Neue', sans-serif;
 }
- 
 
-body {
-    background:#202022;
-    font-family: "Bebas Neue",sans-serif;
-    font-size: 20px;
+body{
+    background-color: #000000;
 }
  
 
 .information-title {
     padding-top: 10px;
     padding-bottom: 30px;
-    font-weight: bold;
+    font-weight: 800;
     text-align: center;
+    font-size: 50px;
 }
  
 
@@ -36,7 +35,7 @@ body {
 }
 
 
-a {
+.start_btn {
     border-radius: 10px;
     background-color: #B9f158; 
     border: 0 solid #E5E7EB;
@@ -48,22 +47,22 @@ a {
     font-weight: 800;
     justify-content: center;
     padding: 12px 26px;
-    position: fixed;
+    position: absolute;
     text-decoration: none #000000 solid;
     text-decoration-thickness: auto;
     width: 100%;
-    max-width: 400px;
+    max-width: 500px;
     cursor: pointer;  
-    top: 70%;
+    top: 80%;
     left: 50%;
     transform: translate(-50%, -50%); /* Center the button both horizontally and vertically */
 }
    
   
-a:focus {
+.start_btn a:focus {
     outline: 0;
 }
 
-a:hover {
+.start_btn :hover {
     color: yellow; 
 }
