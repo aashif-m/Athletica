@@ -6,9 +6,28 @@
         <title>Checkout</title>
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="../Navigation Bar/navbar.css">
+        <link rel="stylesheet" href="../Footer/Footer.css">
     </head>
     <body>
-        <h2>Checkout</h2>
+      <div class="page-title-container">
+        <nav id="top" class="top">
+          <a href="main page 2.html">
+          <img class= "logo" src="../Navigation Bar/logo white blue.png" alt="ATLETICA logo">
+          </a>
+          <!--menu items-->          
+          <ul>
+              <li><a href="../latest main page/main page 2.html" class="selected">HOME</a></li>
+              <li><a href="../Store/Store.html">Products</a></li>
+              <li><a href="../Quiz Page/QuizMainPage.html">QUIZ</a></li>
+              <li><a href="../LatestGallery/Thumbnail.html">GALLERY</a></li>
+              <li><a href="../Gallery/svg.html">SITE MAP</a></li>
+              <li><a href="../Comments Form/Comment Form.html">QUERY FORM</a></li>
+              <li><a href="../Student Details/StudentDetailsPage.html">ABOUT US</a></li>
+          </ul>
+      </nav>
+      </div>
+    </nav>
         <form>
             <div class="container">
                 <div class="form-section">
@@ -77,260 +96,53 @@
                 </div>
             </div>
         </form>
-            
-        <script>
-          function getDetailsFromURL() {
-            // Get the URL parameters
-            let params = new URLSearchParams(window.location.search);
-            // Get the details from the URL parameters
-            let name = params.get("name");
-            let email = params.get("email");
-            let totalValue = params.get("total");
+        <footer>
 
-            // Get the input elements and the total p element
-            let nameInput = document.querySelector("#name");
-            let emailInput = document.querySelector("#email");
-            let total = document.querySelector(".total");
+          <div class="container_footer">
+              <div class="box_footer">
+                  <div class="logo">
+                      <img src="logo white blue.png" alt="">
+                  </div>
+                  <div class="terms">
+                      <p>Athletica is your go-to destination for the latest updates, scores, news, and insights from the thrilling world of sports. Whether you're a fan, athlete, or just love the game, we've got you covered. Stay connected and join the sports community today!</p>
+                  </div>
+              </div>
+              <div class="box_footer">
+                  <h2>Quick Links</h2>
+                  <a href="https://www.google.com">Home Page</a>
+                  <a href="#">Quiz</a>
+                  <a href="#">Gallery</a>
+                  <a href="#">Sitemap</a>
+                  <a href="#">Query Form</a>
+                  <a href="#">About Us</a>
+              </div>
+  
+              <div class="box_footer">
+                  <h2>The Team</h2>
+                  <a href="#">Mohamed Aashif</a>
+                  <a href="#">Mohamed Ishrath</a>
+                  <a href="#">Pragash Sasitharan</a>
+                  <a href="#">Chenuka Sarathchandra</a>              
+              </div>
+  
+              <div class="box_footer">
+                  <h2>Contact Us</h2>
+                  <a href="https://www.Facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i> Facebook</a>
+                  <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter-square"></i> Twitter</a>
+                  <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i> Linkedin</a>
+                  <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram-square"></i> Instagram</a>
+              </div>
+  
+          </div>
+  
+          <div class="box_copyright">
+              <hr>
+              <p>All rights reserved © 2023 <b>Athletica</b> | Site created by: 
+              <a href="#" style="text-decoration: none; color: aliceblue;">Pragash Sasitharan</a></p>
+          </div>
+  
+      </footer>
+        <script src="checkout.js"></script>
 
-            // Set the value of the input elements and the total p element
-            nameInput.value = name;
-            emailInput.value = email;
-            total.textContent = "Total: $" + totalValue;
-          };
-
-          getDetailsFromURL();
-
-
-          // Get all the buttons with the class name save-billing-button or save-payment-button
-          let buttons = document.querySelectorAll(".save-billing-button, .save-payment-button");
-
-          // Get the detail-summary div
-          let detailSummary = document.querySelector(".detail-summary");
-
-          // Get the pay-button
-          let payButton = document.querySelector(".pay-button");
-
-          function checkSummary() {
-            // If all the summary p tags have text content, enable the button and change the text to "Pay"
-            if (nameSummary.textContent && contactSummary.textContent && addressSummary.textContent) {
-              payButton.disabled = false;
-              payButton.textContent = "Pay";
-            } else {
-              // If any of the summary p tags is empty, disable the button and change the text to "Fill the details to pay"
-              payButton.disabled = true;
-              payButton.textContent = "Fill the details to pay";
-            }
-          }
-
-          payButton.addEventListener("click", function() {
-            // If the button is enabled, show the payment confirmation message and redirect to the home page after 3 seconds
-            if (!payButton.disabled) {
-              payButton.classList.add("hidden");
-              let paymentConfirmation = document.querySelector(".payment-cofirmation");
-              paymentConfirmation.classList.remove("hidden");
-              setTimeout(function() {
-                window.location.href = "../Store/Store.html";
-              }, 3000);
-            }
-          });
-
-          
-
-          // Create three p elements with classes name-summary, contact-summary, address-summary and payment-summary and append them to the detail-summary div
-          let nameSummary = document.createElement("p");
-          nameSummary.className = "name-summary hidden";
-          detailSummary.appendChild(nameSummary);
-
-          let contactSummary = document.createElement("p");
-          contactSummary.className = "contact-summary hidden";
-          detailSummary.appendChild(contactSummary);
-
-          let addressSummary = document.createElement("p");
-          addressSummary.className = "address-summary hidden";
-          detailSummary.appendChild(addressSummary);
-
-          let paymentSummary = document.createElement("p");
-          paymentSummary.className = "payment-summary hidden";
-          detailSummary.appendChild(paymentSummary);
-
-          // Loop through the buttons and add a click event listener to each one
-          buttons.forEach(function(button) {
-            button.addEventListener("click", function() {
-              // Get the parent div of the button
-              let parentDiv = button.parentElement;
-              // Get all the children of the parent div
-              let children = parentDiv.children;
-              // Initialize a variable to store the validation status
-              let valid = true;
-              // Loop through the children and validate them if they are not the section-heading
-              for (let i = 0; i < children.length; i++) {
-                let child = children[i];
-                if (child.className !== "section-heading") {
-                  // Validate the input value if it is an input element
-                  if (child.tagName === "INPUT") {
-                    // If any validation fails, set valid to false
-                    if (!validateInput(child)) {
-                      valid = false;
-                    } else {
-                      // If validation passes, remove the class .invalid from the input and add the class .valid
-                      child.classList.remove("invalid");
-                      child.classList.add("valid");
-                    }
-                  }
-                }
-              }
-              if (valid) {
-                checkSummary();
-                for (let i = 0; i < children.length; i++) {
-                  let child = children[i];
-                  if (child.className !== "section-heading") {
-                    // Hide the element by adding the class .hidden
-                    child.classList.add("hidden");
-
-                    if (child.name === "name") {
-                      nameSummary.textContent = "Name: " + child.value;
-                      nameSummary.classList.remove("hidden");
-                    }
-                    if (child.name === "email") {
-                      contactSummary.textContent = "Email: " + child.value;
-                      contactSummary.classList.remove("hidden");
-                    }
-                    if (child.name === "address") {
-                      addressSummary.textContent = "Address: " + child.value;
-                      addressSummary.classList.remove("hidden");
-                    }
-                    if (child.name === "cardnumber") {
-                      paymentSummary.textContent = "Card Number: " + child.value;
-                      paymentSummary.classList.remove("hidden");
-                    }
-                  }
-                }
-
-              }
-            });
-          });
-
-
-          let inputs = document.querySelectorAll("input");
-
-
-          inputs.forEach(function(input) {
-            input.addEventListener("input", function() {
-
-              validateInput(input);
-            });
-          });
-
-
-          let headings = document.querySelectorAll(".section-heading");
-
-          headings.forEach(function(heading) {
-            heading.addEventListener("click", function() {
-
-              let parentDiv = heading.parentElement;
-
-              let children = parentDiv.children;
-
-
-              for (let i = 0; i < children.length; i++) {
-                let child = children[i];
-                child.classList.remove("hidden");
-              }
-              if (heading.textContent === "Billing Address") {
-                addressSummary.textContent = "";
-              }
-              if (heading.textContent === "Contact Details") {
-                contactSummary.textContent = "";
-                nameSummary.textContent = "";
-              }
-              if (heading.textContent === "Payment") {
-                paymentSummary.textContent = "";
-              }
-            });
-          });
-
-
-          function validateInput(input) {
-
-            let name = input.name;
-            let value = input.value;
-
-            let emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-
-            let cardNumberRegex = /^\d{16}$/;
-
-            let cvvRegex = /^\d{3}$/;
-
-            let phoneRegex = /^\d{10}$/;
-
-            let errorMessage = input.parentElement.querySelector(".error-message");
-
-            if (value === "") {
-              input.classList.add("invalid");
-              input.classList.remove("valid");
-              errorMessage.classList.remove("hidden");
-              return false;
-            } else {
-              input.classList.remove("invalid");
-              input.classList.add("valid");
-              errorMessage.classList.add("hidden");
-            }
-
-            if (name === "email") {
-              if (!emailRegex.test(value)) {
-                input.classList.add("invalid");
-                input.classList.remove("valid");
-                errorMessage.classList.remove("hidden");
-                return false;
-              } else {
-                input.classList.remove("invalid");
-                input.classList.add("valid");
-                errorMessage.classList.add("hidden");
-              }
-            }
-
-            if (name === "cardnumber") {
-              if (!cardNumberRegex.test(value)) {
-                input.classList.add("invalid");
-                input.classList.remove("valid");
-                errorMessage.classList.remove("hidden");
-                return false;
-              } else {
-                input.classList.remove("invalid");
-                input.classList.add("valid");
-                errorMessage.classList.add("hidden");
-              }
-            }
-
-            if (name === "cvv") {
-              if (!cvvRegex.test(value)) {
-                input.classList.add("invalid");
-                input.classList.remove("valid");
-                errorMessage.classList.remove("hidden");
-                return false;
-              } else {
-                input.classList.remove("invalid");
-                input.classList.add("valid");
-                errorMessage.classList.add("hidden");
-              }
-            }
-
-            if (name === "phone") {
-              if (!phoneRegex.test(value)) {
-                input.classList.add("invalid");
-                input.classList.remove("valid");
-                errorMessage.classList.remove("hidden");
-                return false;
-              } else {
-                input.classList.remove("invalid");
-                input.classList.add("valid");
-                errorMessage.classList.add("hidden");
-              }
-            }
-
-            return true;
-          }
-
-        </script>
         </body>
         </html>
