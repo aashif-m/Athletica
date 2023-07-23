@@ -6,7 +6,7 @@ body {
 .container {
     display: flex;
     width: 1200px;
-    margin: 0 auto;
+    margin: 20px auto;
 }
 
 .page-title-container {
@@ -14,15 +14,15 @@ body {
     color: #fff;
     padding: 20px;
     text-align: center;
-  }
+}
 
 * {
     box-sizing: border-box;
-  }
+}
 
 .form-section {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    justify-content: space-between;
     gap: 40px;
     width: 1000px;
 }
@@ -30,7 +30,6 @@ body {
 .form-section, .order-section {
     border-radius: 5px;
     box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
-    display: grid;
     margin-right: 50px;
     padding: 20px;
 }
@@ -44,9 +43,10 @@ body {
 }
 
 .payment-section, .billing-section, .contact-details, .billing-address {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    display: flex;
+    flex-direction: column;
     gap: 10px;
+    width: 350px;
 }
 
 
@@ -55,7 +55,7 @@ h2, h3 {
 }
 
 .card-icons {
-    font-size: 40px;;
+    font-size: 30px;
 }
 
 input, select {
