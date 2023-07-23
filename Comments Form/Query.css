@@ -21,7 +21,7 @@ body{
 .container{
     border: 2px solid;
     border-color: white;
-    max-width: 600px;
+    max-width: 90%;
     width: 100%;
     background-color: grey;
     margin: 20px auto;
@@ -158,4 +158,11 @@ body{
     margin-bottom: auto;
     margin-right: auto;
     font-style: italic;
+}
+
+
+.radio{
+   
+        display: flex; /* Use 'inline-flex' if you want them to wrap within a specific width */
+        
 }
