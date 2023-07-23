@@ -14,12 +14,12 @@
         </a>
             <!--menu items-->          
             <ul>
-                <li><a href="main page 2.html" class="selected">HOME</a></li>
+                <li><a href="../Main Page/MainPage.html" class="selected">HOME</a></li>
                 <li><a href="../Store/Store.html">Products</a></li>
                 <li><a href="../Comments Form/Comment Form.html">QUERY FORM</a></li>
                 <li><a href="../Quiz Page/QuizMainPage.html">QUIZ</a></li>
                 <li><a href="../LatestGallery/Thumbnail.html">GALLERY</a></li>
-                <li><a href="../Gallery/svg.html">SITE MAP</a></li>
+                <li><a href="..//LatestSVG/svg.html">SITE MAP</a></li>
                 <li><a href="../Student Details/StudentDetailsPage.html">ABOUT US</a></li>
             </ul>
         </nav>
@@ -95,23 +95,22 @@
         }
         document.body.style.color = textColors[0];      //sets back the to the colour white at index position 0
 
-        let clickCount=0;
-        function changeTxtSize() {          
-        clickCount++; 
-                                                                                                    
-        if (clickCount % 4 === 0) {                 //checks if click count has reached 4                                   //FONT SIZE CHANGE
-        
-            document.querySelectorAll('*').forEach(element => {             
-                element.style.fontSize = '';                  //if so it will reset the font size to the default value
-            });
-        } else {                                                
-            
-            document.querySelectorAll('*').forEach(element => {       //gets the current for size and increases by 2 px while click count is not 4
-                let currentFontSize = parseInt(window.getComputedStyle(element).fontSize, 10);
-                element.style.fontSize = currentFontSize + 2 + 'px';
-            });
-        }
-    }                                                                                       //setting var to display the modal    //DiSPLAY THE MODAL ON HOVER
+        let clickCount = 0;
+  function changeTxtSize() {
+    clickCount++;
+                                                                        
+    if (clickCount % 4 === 0) {
+      document.querySelectorAll('.content *').forEach(element => {     //inceasing text size for text element in the .content  by 2 px until count is equal to 4
+        element.style.fontSize = '';                                        //if clickCount equal to 4 font size will be set the the default values
+      });
+    } else {
+      document.querySelectorAll('.content *').forEach(element => {
+        let currentFontSize = parseInt(window.getComputedStyle(element).fontSize, 10);
+        element.style.fontSize = currentFontSize + 2 + 'px';
+      });
+    }
+  }
+                                                                                  //setting var to display the modal    //DiSPLAY THE MODAL ON HOVER
                                                                     
         var imageCount = document.getElementsByClassName("hoverEff");           // getting all img elements with the hover eff class are taken and the count is assigned
         var ThisBorder = document.getElementById("Border");                     //getting  the border property to  assigning to ThisBorder
