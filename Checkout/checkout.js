@@ -56,21 +56,13 @@ function getDetailsFromURL() {
   
 
   // Create three p elements with classes name-summary, contact-summary, address-summary and payment-summary and append them to the detail-summary div
-  let nameSummary = document.createElement("p");
-  nameSummary.className = "name-summary hidden";
-  detailSummary.appendChild(nameSummary);
+  let nameSummary = document.querySelector(".name-summary");
 
-  let contactSummary = document.createElement("p");
-  contactSummary.className = "contact-summary hidden";
-  detailSummary.appendChild(contactSummary);
+  let contactSummary = document.querySelector(".contact-summary");
 
-  let addressSummary = document.createElement("p");
-  addressSummary.className = "address-summary hidden";
-  detailSummary.appendChild(addressSummary);
+  let addressSummary = document.querySelector(".address-summary");
 
-  let paymentSummary = document.createElement("p");
-  paymentSummary.className = "payment-summary hidden";
-  detailSummary.appendChild(paymentSummary);
+  let paymentSummary = document.querySelector(".payment-summary")
 
   // Loop through the buttons and add a click event listener to each one
   buttons.forEach(function(button) {
