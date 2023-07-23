@@ -10,10 +10,9 @@
     height: 70vh;
     background: linear-gradient(to bottom, #181e1f 0%, #d1cbcb 100%);
 	padding-top: 160px;
-    background-image: url(ring.jpg);
-	
-    
+    background-image: url(ring.jpg);   
 }
+
 h1{
     color: white;
     text-align: center;
