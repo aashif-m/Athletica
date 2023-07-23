@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+	box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: #000;
+}
+
+footer {
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.container {
+
+	font-size: 1.2em;
+	margin: 0;
+	padding: 2em;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile {
+	text-align: center;
+	padding: 2em;
+    background-color: #212121;
+    box-shadow: 8px 8px 0px rgba(255, 255, 255, 0.06);
+    width: 25em;
+}
+
+h1 {
+	margin: 0;
+}
+
+#profile-picture-container {
+	margin: auto;
+	color: #555;
+	margin-bottom: 1em;
+}
+
+#profile-picture {
+	border-radius: 0.25em;
+	height: 8.7em;
+    border-radius: 50%;
+}
+
+#pages-heading {
+    margin: .5em;
+	padding: 0 .5em;
+	text-align: center;
+	font-size: 110%;
+	line-height: 100%;
+}
+
+dl {
+	text-align: left;
+}
+
+dt {
+	line-height: 150%;
+    color: white !important;
+}
+
+dd {
+    color: #9b9191;
+    margin-bottom: 5px;;
+}
+
+hr {
+	border: 0;
+	height: 1px;
+	background: #333;
+	margin: 1.5em 0;
+}
+
+a:link, a:visited {
+        color: white !important;
+        text-decoration-color: #555;
+        text-decoration: none;
+        border-bottom: 1px dotted #000;
+}
+
+a:hover, a:active {
+        color: #ccc !important;
+        text-decoration-color: #000;
+        text-decoration: none;
+        border-bottom: 2px solid #000;
+}
+
+
+i {
+        color: #fabc02;
+        margin-right: 5px;
+}
