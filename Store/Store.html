@@ -5,10 +5,26 @@
     <meta name="viewport" content="device-width" initial-scale=1.0">
     <title>Store</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../Navigation Bar/navbar.css">
+    <link rel="stylesheet" href="../Footer/Footer.css">
 </head>
 <body>
   <div class="page-title-container">
-    <h1 class="page-title">Athletica Shop</h1>
+    <nav id="top" class="top">
+      <a href="main page 2.html">
+      <img class= "logo" src="../Navigation Bar/logo white blue.png" alt="ATLETICA logo">
+      </a>
+      <!--menu items-->          
+      <ul>
+          <li><a href="../latest main page/main page 2.html" class="selected">HOME</a></li>
+          <li><a href="../Store/Store.html">Products</a></li>
+          <li><a href="../Quiz Page/QuizMainPage.html">QUIZ</a></li>
+          <li><a href="../LatestGallery/Thumbnail.html">GALLERY</a></li>
+          <li><a href="../Gallery/svg.html">SITE MAP</a></li>
+          <li><a href="../Comments Form/Comment Form.html">QUERY FORM</a></li>
+          <li><a href="../Student Details/StudentDetailsPage.html">ABOUT US</a></li>
+      </ul>
+  </nav>
   </div>
   <div class="container">
     <div class="products-container">
@@ -34,237 +50,55 @@
     </div>
 
   </div>
+  <footer>
+
+    <div class="container_footer">
+        <div class="box_footer">
+            <div class="logo">
+                <img src="logo white blue.png" alt="">
+            </div>
+            <div class="terms">
+                <p>Athletica is your go-to destination for the latest updates, scores, news, and insights from the thrilling world of sports. Whether you're a fan, athlete, or just love the game, we've got you covered. Stay connected and join the sports community today!</p>
+            </div>
+        </div>
+        <div class="box_footer">
+            <h2>Quick Links</h2>
+            <a href="https://www.google.com">Home Page</a>
+            <a href="#">Quiz</a>
+            <a href="#">Gallery</a>
+            <a href="#">Sitemap</a>
+            <a href="#">Query Form</a>
+            <a href="#">About Us</a>
+        </div>
+
+        <div class="box_footer">
+            <h2>The Team</h2>
+            <a href="#">Mohamed Aashif</a>
+            <a href="#">Mohamed Ishrath</a>
+            <a href="#">Pragash Sasitharan</a>
+            <a href="#">Chenuka Sarathchandra</a>              
+        </div>
+
+        <div class="box_footer">
+            <h2>Contact Us</h2>
+            <a href="https://www.Facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i> Facebook</a>
+            <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter-square"></i> Twitter</a>
+            <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i> Linkedin</a>
+            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram-square"></i> Instagram</a>
+        </div>
+
+    </div>
+
+    <div class="box_copyright">
+        <hr>
+        <p>All rights reserved © 2023 <b>Athletica</b> | Site created by: 
+        <a href="#" style="text-decoration: none; color: aliceblue;">Pragash Sasitharan</a></p>
+    </div>
+
+</footer>
 
 
-  <script>
-    var products = [
-    {
-      name: "Basket Ball",
-      price: 50,
-      image: "basketball.jpg",
-      quantity: 0
-    },
-    {
-      name: "Volley Ball",
-      price: 40,
-      image: "volleyball.jpg",
-      quantity: 0
-    },
-    {
-      name: "Football",
-      price: 60,
-      image: "football.jpg",
-      quantity: 0
-    },
-    {
-      name: "Cricket Bat",
-      price: 60,
-      image: "bat.jpg",
-      quantity: 0
-    },
-    {
-      name: "Badminton Racket",
-      price: 90,
-      image: "badminton.jpg",
-      quantity: 0
-    },
-    {
-      name: "Mouse Pad",
-      price: 30,
-      image: "mousepad.jpg",
-      quantity: 0
-    }
-  ];
-
-
-    var productsContainer = document.querySelector(".products-container");
-    var orderItems = document.querySelector(".order-items");
-    var total = document.querySelector(".total");
-    var checkoutButton = document.querySelector(".order-form button");
-    var nameInput = document.querySelector("#name");
-    var emailInput = document.querySelector("#email");
-    var nameLabel = document.querySelector("label[for='name']");
-    var emailLabel = document.querySelector("label[for='email']");
-
-
-    function displayProducts() {
-      for (var i = 0; i < products.length; i++) {
-        var productDiv = document.createElement("div");
-        productDiv.className = "product";
-
-        var productImg = document.createElement("img");
-        productImg.src = products[i].image;
-        productImg.alt = "Product Image";
-
-        var productInfo = document.createElement("div");
-        productInfo.className = "info";
-
-        var productName = document.createElement("h3");
-        productName.textContent = products[i].name;
-
-        var productPrice = document.createElement("p");
-        productPrice.className = "price";
-        productPrice.textContent = "$" + products[i].price;
-
-        var addButton = document.createElement("button");
-        addButton.textContent = "Add to Cart";
-        
-        addButton.addEventListener("click", function() {
-          addToCart(this);
-          showForm();
-          validateForm();
-        });
-
-        productInfo.appendChild(productName);
-        productInfo.appendChild(productPrice);
-        productInfo.appendChild(addButton);
-
-        productDiv.appendChild(productImg);
-        productDiv.appendChild(productInfo);
-
-        productsContainer.appendChild(productDiv);
-      }
-    }
-
-    function addToCart(button) {
-      var index = button.parentElement.firstChild.textContent;
-
-      for (var i = 0; i < products.length; i++) {
-        if (products[i].name == index) {
-          products[i].quantity++;
-
-          updateOrderItems();
-          updateTotal();
-          
-          checkoutButton.disabled = false;
-          checkoutButton.textContent = "Check Out";
-          break;
-        }
-      }
-    }
-
-    function updateOrderItems() {
-      orderItems.innerHTML = "";
-
-      for (var i = 0; i < products.length; i++) {
-        if (products[i].quantity > 0) {
-
-          var orderItemDiv = document.createElement("div");
-          orderItemDiv.className = "order-item";
-
-          var orderItemImg = document.createElement("img");
-          orderItemImg.src = products[i].image;
-          orderItemImg.alt = "Order Item Image";
-
-          var orderItemNameQuantity = document.createElement("p");
-          orderItemNameQuantity.textContent =
-            products[i].name + " x " + products[i].quantity;
-
-          var orderItemPrice = document.createElement("p");
-          orderItemPrice.textContent = "$" + products[i].price * products[i].quantity;
-
-          var removeButton = document.createElement("button");
-          removeButton.textContent = "Remove";
-
-          removeButton.addEventListener("click", function() {
-            removeFromCart(this);
-            hideForm();
-
-          });
-
-          orderItemDiv.appendChild(orderItemImg);
-          orderItemDiv.appendChild(orderItemNameQuantity);
-          orderItemDiv.appendChild(orderItemPrice);
-          orderItemDiv.appendChild(removeButton);
-
-          orderItems.appendChild(orderItemDiv);
-        }
-      }
-    }
-
-
-    function removeFromCart(button) {
-      var index = button.parentElement.firstChild.nextSibling.textContent.split(
-        " x "
-      )[0];
-
-      for (var i = 0; i < products.length; i++) {
-        if (products[i].name == index) {
-          products[i].quantity--;
-
-          updateOrderItems();
-          updateTotal();
-
-          if (total.textContent == "Total: $0") {
-            checkoutButton.disabled = true;
-            checkoutButton.textContent = "Order is empty";
-            nameInput.value = "";
-            emailInput.value = "";
-          }
-
-          break;
-        }
-      }
-    }
-
-    function updateTotal() {
-      var totalAmount = 0;
-
-      for (var i = 0; i < products.length; i++) {
-        totalAmount += products[i].price * products[i].quantity;
-      }
-
-      total.textContent = "Total: $" + totalAmount;
-      document.getElementById("total").value = totalAmount;
-    }
-
-    function showForm() {
-      if (total.textContent != "Total: $0") {
-        nameInput.style.display = "inline-block";
-        emailInput.style.display = "inline-block";
-        nameLabel.style.display = "inline-block";
-        emailLabel.style.display = "inline-block";
-      }
-    }
-
-    function hideForm() {
-      if (total.textContent == "Total: $0") {
-        nameInput.style.display = "none";
-        emailInput.style.display = "none";
-        nameLabel.style.display = "none";
-        emailLabel.style.display = "none";
-      }
-    }
-
-    function validateForm() {
-      var nameValue = nameInput.value;
-      var emailValue = emailInput.value;
-
-      var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-
-        if (nameValue != "" && emailValue != "" && emailRegex.test(emailValue)) {
-        checkoutButton.disabled = false;
-        checkoutButton.textContent = "Check Out";
-      } else {
-        checkoutButton.disabled = true;
-        checkoutButton.textContent = "Please enter a valid name and email";
-      }
-    }
-
-    displayProducts();
-
-    nameInput.addEventListener("input", function() {
-      validateForm();
-    });
-
-
-    emailInput.addEventListener("input", function() {
-      validateForm();
-    });
-
-    
-
-  </script>
+  <script src="store.js"></script>
 
 </body>
 
