@@ -35,10 +35,8 @@ body {
 }
 
 .order-section {
-    max-height: 500px;
+    max-height: 250px;
     width: 400px;
-    justify-content: center;
-    align-items: center;
     text-align: center;
 }
 
@@ -48,7 +46,6 @@ body {
     gap: 10px;
     width: 350px;
 }
-
 
 h2, h3 {
     color: #333333;
@@ -84,6 +81,11 @@ button[disabled]{
     cursor: not-allowed;
     color: #000;
     background-color: #ccc;
+}
+
+.pay-button {
+    padding: 5px 40px;
+    margin-top: 20px;;
 }
 
 .section-heading {
