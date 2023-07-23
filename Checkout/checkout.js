@@ -55,7 +55,7 @@ function getDetailsFromURL() {
 
   
 
-  // Create three p elements with classes name-summary, contact-summary, address-summary and payment-summary and append them to the detail-summary div
+  // Selects the summary p tags
   let nameSummary = document.querySelector(".name-summary");
 
   let contactSummary = document.querySelector(".contact-summary");
