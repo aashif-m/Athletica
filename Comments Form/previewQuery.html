@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATHLETICA  Preview Query</title>
+
+    <!--Linking the page icon-->
+    <link rel="icon" href="logo white blue.png">
+
+    <!--Linking with query form stylesheet-->
+    <link rel="stylesheet"  href="Query.css">
+
+    <!--Linking with the javascript file-->
+    <script defer src="queryPreview.js"></script>
+
+
+
+    
+</head>
+
+<body>
+
+    
+    <!-- Starting query form -->
+    <div class="container">
+        <div>
+            <img src="logo white blue.png" alt="ATHLETICA Logo" id="ATHLETICALogo" width="100">
+        </div>
+        <div class ="form">
+            <div class="title">
+                Query Form
+            </div>
+            <div class="query-preview">
+                <h2>Name: <span class="preview" id="name-preview"></span></h2>
+	            <h2>Email: <span class="preview" id="email-preview"></span></h2>
+	            <h2>Subject: <span class="preview" id="subject-preview"></span></h2>
+	            <h2>Message: <span class="preview" id="message-preview"></span></h2>
+            </div>
+            <div class="submit-box">
+                <input type="reset" class="button" value="Edit" onclick="edit()" >
+                <input type="submit" class="button" value="Send" onclick="send()" >
+            </div>
+        </div>
+
+    </div>
+    <!-- End of query form -->
+
+</body>
+</html>
