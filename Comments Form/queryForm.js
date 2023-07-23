@@ -28,7 +28,7 @@ function validate()
     //validating email
 	var atPosition = email.indexOf("@");
 	var dotPosition = email.lastIndexOf(".");
-    if (atPosition<1 || dotPosition<atPosition+2 || dotPosition+2>=x.length){    //https://www.javatpoint.com/javascript-form-validation
+    if (atPosition<1 || dotPosition<atPosition+2 || dotPosition+2>=email.length){    //https://www.javatpoint.com/javascript-form-validation
 		alert("Not a valid email")
         return false;
     }	
