@@ -12,7 +12,7 @@ h1{
 body{
     background-color:black;
     transition: background-color 0.5s, color 0.5s;   /*Body styling*/
-    margin-top: 50px;
+    /* margin-top: 50px; */
     
 }
 .content{
