@@ -125,8 +125,8 @@ body{
 }
 #Border {
     position: absolute;   /*Positioning the Modal to be printed in the center*/
-    top:280px;
-    left: 500px;
+    top:230px;
+    left: 450px;
 }
 
 .Imgcontent{
