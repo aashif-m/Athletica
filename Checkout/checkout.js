@@ -50,7 +50,7 @@ payButton.addEventListener("click", function () {
 		let paymentConfirmation = document.querySelector(".payment-cofirmation");
 		paymentConfirmation.classList.remove("hidden");
 		setTimeout(function () {
-			window.location.href = "../Store/Store.html";
+			window.location.href = "../MainPage/MainPage.html";
 		}, 3000);
 	}
 });
