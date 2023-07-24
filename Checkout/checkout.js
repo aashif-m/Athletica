@@ -179,6 +179,8 @@ function validateInput(input) {
 
 	let phoneRegex = /^\d{10}$/;
 
+	let expiryRegex = /^\d{2}\/\d{2}$/;
+
 	// Get the error message element
 	let errorMessage = input.parentElement.querySelector(".error-message");
 
@@ -211,6 +213,20 @@ function validateInput(input) {
 	// Validate the card number
 	if (name === "cardnumber") {
 		if (!cardNumberRegex.test(value)) {
+			input.classList.add("invalid");
+			input.classList.remove("valid");
+			errorMessage.classList.remove("hidden");
+			return false;
+		} else {
+			input.classList.remove("invalid");
+			input.classList.add("valid");
+			errorMessage.classList.add("hidden");
+		}
+	}
+
+	// Validate the expiry date
+	if (name === "expiry") {
+		if (!expiryRegex.test(value)) {
 			input.classList.add("invalid");
 			input.classList.remove("valid");
 			errorMessage.classList.remove("hidden");
