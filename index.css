@@ -1,0 +1,78 @@
+body {
+    background-color: #000;
+}
+
+h1 {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    margin-bottom: 0px;
+}
+
+p {
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+}
+
+.center-top {
+    height: 80vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+}
+
+.wave {
+    width: 100px;
+    height: 5px;
+    background: linear-gradient(45deg, cyan, #fff);
+    margin: 10px;
+    animation: wave 2s linear infinite;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+@keyframes wave {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+
+.slogan {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 20px;
+}
+
+button {
+    width: 200px;
+    margin-top: 20px;
+    height: 50px;
+    border: none;
+    border-radius: 25px;
+    background-color: cyan;
+    color: #000;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+footer {
+    height: 10vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+}
+
