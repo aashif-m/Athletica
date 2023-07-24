@@ -53,7 +53,7 @@ for (var i = 0; i < products.length; i++) {
   // Create the product div
   var productDiv = document.createElement("div");
   productDiv.className = "product";
-  
+
   // Create the product image
   var productImg = document.createElement("img");
   productImg.src = products[i].image;
@@ -75,7 +75,7 @@ for (var i = 0; i < products.length; i++) {
   addButton.textContent = "Add to Cart";
 
   // 
-  addButton.addEventListener("click", function() {
+  addButton.addEventListener("click", function () {
     addToCart(this);
     showForm();
     validateForm();
@@ -98,7 +98,7 @@ for (var i = 0; i < products.length; i++) {
 // Function to add the product to the cart
 function addToCart(button) {
 
-  // Get the product name from the button's parent element
+// Get the product name from the button's parent element
 var index = button.parentElement.firstChild.textContent;
 
 for (var i = 0; i < products.length; i++) {
@@ -148,7 +148,7 @@ for (var i = 0; i < products.length; i++) {
     removeButton.textContent = "Remove";
 
     // Add event listener to the remove button
-    removeButton.addEventListener("click", function() {
+    removeButton.addEventListener("click", function () {
       removeFromCart(this);
       hideForm();
 
@@ -168,7 +168,7 @@ for (var i = 0; i < products.length; i++) {
 
 // Function to remove the product from the cart
 function removeFromCart(button) {
-  
+
 // Get the product name from the button's parent element
 var index = button.parentElement.firstChild.nextSibling.textContent.split(
   " x "
@@ -199,7 +199,7 @@ for (var i = 0; i < products.length; i++) {
 
 // Function to update the total amount
 function updateTotal() {
-  // Set the total amount to 0
+// Set the total amount to 0
 var totalAmount = 0;
 
 // Loop through the products array
@@ -234,7 +234,7 @@ if (total.textContent == "Total: $0") {
 }
 
 function validateForm() {
-  // Get the name and email value
+// Get the name and email value
 var nameValue = nameInput.value;
 var emailValue = emailInput.value;
 
@@ -255,11 +255,11 @@ if (nameValue != "" && emailValue != "" && emailRegex.test(emailValue)) {
 displayProducts();
 
 // Add event listener to the name and email input
-nameInput.addEventListener("input", function() {
+nameInput.addEventListener("input", function () {
 validateForm();
 });
 
 // Add event listener to the email input
-emailInput.addEventListener("input", function() {
+emailInput.addEventListener("input", function () {
 validateForm();
 });
