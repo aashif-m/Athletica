@@ -19,7 +19,9 @@
 
 
     </head>
-    <body onload="NextQuestion(0)">
+    <body onload="NextQuestion(0)"> <!-- onload function to load the first question when the page loads -->
+
+        <!-- Navigation Bar -->
         <nav id="top" class="top">
             <a href="../MainPage/MainPage.html">
             <img class= "logo" src="../NavigationBar/Logo.png" alt="ATLETICA logo">
@@ -36,6 +38,9 @@
             </ul>
         </nav>
 
+        <!-- End of Navigation Bar -->
+
+        <!-- Quiz Page Heading -->
         <main>
 
             <!-- creating a window for when quiz ends -->
@@ -55,8 +60,7 @@
                     </div>
 
                     <div class="modal-button-container">
-                        <button
-                            onclick="closeScoreWindow(); location.href='QuizMainPage.html'">Quit</button>
+                        <button onclick="closeScoreWindow(); location.href='QuizMainPage.html'">Quit</button>
                     </div>
                 </div>
             </div>
@@ -69,26 +73,26 @@
 
                 <!-- Score and Question Number -->
                 <div class="game-details-container">
-                    <h1>Score : <span id="player-score"></span> / 10</h1>
-                    <h1>Question : <span id="question-number"></span> / 10</h1>
+                    <h1>Score : <span id="player-score"></span> / 10</h1> <!-- Score -->
+                    <h1>Question : <span id="question-number"></span> / 10</h1> <!-- Question Number -->
                 </div>
 
                 <!-- Question -->
                 <div class="game-question-container">
-                    <h1 id="display-question">QUIZ</h1>
+                    <h1 id="display-question">QUIZ</h1> <!-- Question -->
                 </div>
 
                 <!-- Options -->
                 <div class="game-options-container">
 
                     <!-- Window to show if no input -->
-                    <div class="modal-container" id="option-modal">
+                    <div class="modal-container" id="option-modal"> 
 
                         <div class="modal-content-container">
-                            <h1>Please Pick An Option</h1>
+                            <h1>Please Pick An Option</h1> <!-- Message -->
 
                             <div class="modal-button-container">
-                                <button onclick="AnswerModal()">Continue</button>
+                                <button onclick="AnswerModal()">Continue</button> <!-- Continue Button -->
                             </div>
 
                         </div>
@@ -97,26 +101,26 @@
 
                     <!-- Option 1 -->
                     <span>
-                        <input type="radio" id="option-one" name="option" class="radio" value="optionA">
-                        <label for="option-one" class="option" id="option-one-label"></label>
+                        <input type="radio" id="option-one" name="option" class="radio" value="optionA"> <!-- Radio Button 1 -->
+                        <label for="option-one" class="option" id="option-one-label"></label> <!-- Label -->
                     </span>
 
                     <!-- Option 2 -->
                     <span>
-                        <input type="radio" id="option-two" name="option" class="radio" value="optionB">
-                        <label for="option-two" class="option" id="option-two-label"></label>
+                        <input type="radio" id="option-two" name="option" class="radio" value="optionB"> <!-- Radio Button 2 -->
+                        <label for="option-two" class="option" id="option-two-label"></label> <!-- Label -->
                     </span>
 
                     <!-- Option 3 -->
                     <span>
-                        <input type="radio" id="option-three" name="option" class="radio" value="optionC">
-                        <label for="option-three" class="option" id="option-three-label"></label>
+                        <input type="radio" id="option-three" name="option" class="radio" value="optionC"> <!-- Radio Button 3 -->
+                        <label for="option-three" class="option" id="option-three-label"></label> <!-- Label -->
                     </span>
 
                     <!-- Option 4 -->
                     <span>
-                        <input type="radio" id="option-four" name="option" class="radio" value="optionD">
-                        <label for="option-four" class="option" id="option-four-label"></label>
+                        <input type="radio" id="option-four" name="option" class="radio" value="optionD"> <!-- Radio Button 4 -->
+                        <label for="option-four" class="option" id="option-four-label"></label> <!-- Label -->
                     </span>
 
                 </div>
@@ -135,14 +139,14 @@
             <div class="container_footer">
                 <div class="box_footer">
                     <div class="logo">
-                        <img src="../Footer/Logo.png" alt="">
+                        <img src="../Footer/Logo.png" alt="Logo"> <!-- Logo -->
                     </div>
-                    <div class="terms">
+                    <div class="terms"> <!-- About Us -->
                         <p>Athletica is your go-to destination for the latest updates, scores, news, and insights from the thrilling world of sports. Whether you're a fan, athlete, or just love the game, we've got you covered. Stay connected and join the sports community today!</p>
                     </div>
                 </div>
                 <div class="box_footer">
-                <h2>Quick Links</h2>
+                <h2>Quick Links</h2> <!-- Quick Links -->
                     <a href="../MainPage/MainPage.html">Home Page</a>
                     <a href="../Store/Store.html">Product</a>
                     <a href="../QuizPage/QuizMainPage.html">Quiz</a>
@@ -153,7 +157,7 @@
                 </div>
         
                 <div class="box_footer">
-                    <h2>The Team</h2>
+                    <h2>The Team</h2> <!-- The Team -->
                     <a href="../PageEditors/HTML/Aashif.html">Mohamed Aashif</a>
                     <a href="../PageEditors/HTML/Ishrath.html">Muhammad Ishrath</a>
                     <a href="../PageEditors/HTML/Pragash.html">Pragash Sasitharan</a>
@@ -161,7 +165,7 @@
                 </div>
 
                 <div class="box_footer">
-                    <h2>Contact Us</h2>
+                    <h2>Contact Us</h2> <!-- Contact Us -->
                     <a href="https://www.Facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i> Facebook</a>
                     <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter-square"></i> Twitter</a>
                     <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i> Linkedin</a>
@@ -169,11 +173,11 @@
                 </div>
 
             </div>
-
-            <div class="box_copyright">
+            <!-- Copywrite and Page Editor-->
+            <div class="box_copyright"> 
                 <hr>
                 <p>All rights reserved © 2023 <b>Athletica</b> | Site created by: 
-                <a href="../PageEditors/HTML/Pragash.html" style="text-decoration: none; color: aliceblue;">Pragash Sasitharan</a></p>
+                <a href="../PageEditors/HTML/Pragash.html" style="text-decoration: none; color: aliceblue;">Pragash Sasitharan</a></p> 
             </div>
 
         </footer>
