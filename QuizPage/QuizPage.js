@@ -202,124 +202,121 @@ const questions = [
 ]
 
 
-let shuffledQuestions = [] //empty array to hold shuffled selected questions
-
-function handleQuestions() { 
-    //function to shuffle and push 10 questions to shuffledQuestions array
-    while (shuffledQuestions.length <= 9) {
-        const random = questions[Math.floor(Math.random() * questions.length)]
-        if (!shuffledQuestions.includes(random)) { //Checks if the same question is there in the array already.
-            shuffledQuestions.push(random)
-        }
-    }
-}
-
+//Variables
 
 let questionNumber = 1
 let playerScore = 0  
 let wrongAttempt = 0 
 let indexNumber = 0
-
 let secondsLeft = 120;
-
-//Function for timer countdown
-const timer = setInterval(function() {
-  secondsLeft--;
-  document.getElementById("time-display").textContent = secondsLeft;
-  document.getElementById("time-header").textContent = secondsLeft;
-  if (secondsLeft === 0) {
-    clearInterval(timer);
-    alert("Time's up!");
-    handleEndGame();
-  }
-}, 1000);
-
 
 // function for displaying next question in the array to dom
 function NextQuestion(index) {
-    handleQuestions()
-    const currentQuestion = shuffledQuestions[index]
-    document.getElementById("question-number").innerHTML = questionNumber
-    document.getElementById("player-score").innerHTML = playerScore
-    document.getElementById("display-question").innerHTML = currentQuestion.question;
-    document.getElementById("option-one-label").innerHTML = currentQuestion.optionA;
-    document.getElementById("option-two-label").innerHTML = currentQuestion.optionB;
-    document.getElementById("option-three-label").innerHTML = currentQuestion.optionC;
-    document.getElementById("option-four-label").innerHTML = currentQuestion.optionD;
+    handleQuestions() //Calls the function to randomise the questions
+    const currentQuestion = shuffledQuestions[index] //Gets the current question
+    document.getElementById("question-number").innerHTML = questionNumber //Displays the question number
+    document.getElementById("player-score").innerHTML = playerScore //Displays the player score
+    document.getElementById("display-question").innerHTML = currentQuestion.question; //Displays the question
+    document.getElementById("option-one-label").innerHTML = currentQuestion.optionA; //Displays the first option
+    document.getElementById("option-two-label").innerHTML = currentQuestion.optionB; //Displays the second option
+    document.getElementById("option-three-label").innerHTML = currentQuestion.optionC; //Displays the third option
+    document.getElementById("option-four-label").innerHTML = currentQuestion.optionD; //Displays the fourth option
+}
+
+//Function for timer countdown
+const timer = setInterval(function() {  
+  secondsLeft--;
+  document.getElementById("time-header").textContent = secondsLeft;   //Displays the time left
+  if (secondsLeft === 0) {//Checks if the time is up
+    clearInterval(timer);//Clears the timer
+    alert("Time's up!");//Alerts the user that the time is up
+    handleEndGame();//Ends the game
+  }
+}, 1000);
+
+let shuffledQuestions = [] //Array for the Random Questions
+
+function handleQuestions() { 
+    //Funtion to randomise the questions
+    while (shuffledQuestions.length < 10) { //Loop to get 10 random questions
+        const random = questions[Math.floor(Math.random() * questions.length)]
+        if (!shuffledQuestions.includes(random)) { //Checks if the same question is there in the array already.
+            shuffledQuestions.push(random) //Pushes the random question to the array
+        }
+    }
 }
 
 
+
 function checkForAnswer() {
-    const currentQuestion = shuffledQuestions[indexNumber] //gets current Question 
-    const currentQuestionAnswer = currentQuestion.correctOption //gets current Question's answer
-    const options = document.getElementsByName("option"); //gets all elements in dom with name of 'option' (in this the radio inputs)
+    const currentQuestion = shuffledQuestions[indexNumber] //Current Question 
+    const currentQuestionAnswer = currentQuestion.correctOption //Current Question Answer
+    const options = document.getElementsByName("option"); //Gets all the options
     let correctOption = null
 
     options.forEach((option) => {
-        if (option.value === currentQuestionAnswer) {
-            //get's correct's radio input with correct answer
-            correctOption = option.labels[0].id
+        if (option.value === currentQuestionAnswer) { //Checks if the value of the option is equal to the answer
+            correctOption = option.labels[0].id //Gets the id of the label
         }
     })
    
-    //checking to make sure a radio input has been checked or an option being chosen
+    //Checks if the radio button is checked
     if (options[0].checked === false && options[1].checked === false && options[2].checked === false && options[3].checked == false) {
         document.getElementById('option-modal').style.display = "flex"
     }
 
-    //checking if checked radio button is same as answer
+    //Checks if the checked radio button is correct
     options.forEach((option) => {
-        if (option.checked === true && option.value === currentQuestionAnswer) {
+        if (option.checked === true && option.value === currentQuestionAnswer) { //Checks if the checked radio button is correct
             document.getElementById(correctOption).style.backgroundColor = "#3ee739"
-            playerScore++
-            indexNumber++
-            //set to delay question number till when next question loads
+            playerScore++ //Increments Player Score by 1
+            indexNumber++ //Increments Index Number by 1
+            //Delay of 2sec before next question loads
             setTimeout(() => {
-                questionNumber++
-            }, 1000)
+                questionNumber++ 
+            }, 1200)
         }
 
-        else if (option.checked && option.value !== currentQuestionAnswer) {
+        else if (option.checked && option.value !== currentQuestionAnswer) { //Checks if the checked radio button is wrong
             const wrongLabelId = option.labels[0].id
             document.getElementById(wrongLabelId).style.backgroundColor = "#ff5858"
             document.getElementById(correctOption).style.backgroundColor = "#3ee739"
-            wrongAttempt++
-            indexNumber++
-            //set to delay question number till when next question loads
+            wrongAttempt++ //Increments Wrong Attempts by 1
+            indexNumber++ //Increments Index Number by 1
+            //Delay of 2sec before next question loads
             setTimeout(() => {
                 questionNumber++
-            }, 1000)
+            }, 1200)
         }
     })
 }
 
-
-
-//called when the next button is called
-function promptNextQuestion() {
-    checkForAnswer()
-    unCheckRadioButtons()
-    //delays next question displaying for a second
-    setTimeout(() => {
-        if (indexNumber <= 9) {
-            NextQuestion(indexNumber)
-        }
-        else {
-            handleEndGame()
-        }
-        resetOptionBackground()
-    }, 1000);
-}
-
-//sets options background back to null after display the right/wrong colors
+//Resets the background color of the options to null.
 function resetOptionBackground() {
-    const options = document.getElementsByName("option");
+    const options = document.getElementsByName("option"); //Gets all the options
     options.forEach((option) => {
         document.getElementById(option.labels[0].id).style.backgroundColor = ""
     })
 }
 
-// unchecking all radio buttons for next question(can be done with map or foreach loop also)
+//Next Button
+function promptNextQuestion() {
+    checkForAnswer() //Check if the answer is correct
+    unCheckRadioButtons() //Uncheck all radio buttons
+    //Delay of 2sec before next question loads
+    setTimeout(() => { 
+        if (indexNumber <= 9) { //Checks if it is the last question
+            NextQuestion(indexNumber) //Loads next question
+        }
+        else {
+            handleEndGame() //Ends the game
+        }
+        resetOptionBackground() //Resets the background color of the options to null.
+    }, 1200);
+}
+
+
+// Unchecks all radio buttons
 function unCheckRadioButtons() {
     const options = document.getElementsByName("option");
     for (let i = 0; i < options.length; i++) {
@@ -327,12 +324,12 @@ function unCheckRadioButtons() {
     }
 }
 
-// function for when all questions being answered
+//function to handle score board and display the score
 function handleEndGame() {
     let remark = null
     let remarkColor = null
 
-    // condition check for player remark and remark color
+    //Remark based on the player score
     if(playerScore > 7){
         remark = "Excellent 🥳, Keep working hard!!"
         remarkcolor = "green"
@@ -345,7 +342,7 @@ function handleEndGame() {
     }
     const playerGrade = (playerScore / 10) * 100
 
-    //data to display to score board
+    //Data to be displayed in score modal
     clearInterval(timer);
     document.getElementById('remarks').innerHTML = remark
     document.getElementById('remarks').style.color = remarkColor
@@ -357,7 +354,12 @@ function handleEndGame() {
 
 }
 
-//closes score modal and resets game
+//function to close warning modal
+function AnswerModal() {
+    document.getElementById('option-modal').style.display = "none"
+}
+
+//function to close score modal
 function closeScoreWindow() {
     questionNumber = 1
     playerScore = 0
@@ -366,11 +368,6 @@ function closeScoreWindow() {
     shuffledQuestions = []
     NextQuestion(indexNumber)
     document.getElementById('score-modal').style.display = "none"
-}
-
-//function to close warning modal
-function AnswerModal() {
-    document.getElementById('option-modal').style.display = "none"
 }
 
 
