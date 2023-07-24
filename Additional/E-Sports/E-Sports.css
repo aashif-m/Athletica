@@ -84,6 +84,7 @@ hr {
 }
 
 
+/* Button Styles */
 
 .btn-container {
   display: flex;
@@ -145,6 +146,8 @@ hr {
   position: relative;
 }
 
+/* Grid Styles */
+
 .Game-Title {
   color: rgb(85, 85, 85);
   font-weight: 600;
@@ -168,6 +171,8 @@ hr {
   width: 90%;
   height: 90%;
 }
+
+/* Explore Button Style */
 
 #explore-button {
   font-family: "Poppins";
@@ -198,6 +203,7 @@ transform:scale(1.2);
 transition:0.3s ease;
 }
 
+/* Back to top Style */
 
 #back-to-top-btn {
   font-family: "Poppins";
