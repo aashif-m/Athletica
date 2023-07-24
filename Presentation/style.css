@@ -19,7 +19,7 @@ p {
     color: #fff;
 }
 
-.center-top {
+.center {
     height: 80vh; 
     display: flex;
     justify-content: center;
@@ -30,7 +30,7 @@ p {
 .wave {
     width: 100px;
     height: 5px;
-    background: linear-gradient(45deg, cyan, #fff);
+    background: white;
     margin: 10px;
     animation: wave 2s linear infinite;
     border-radius: 20px;
@@ -69,10 +69,6 @@ button {
 }
 
 footer {
-    height: 10vh; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; 
+    text-align: center;
 }
 
