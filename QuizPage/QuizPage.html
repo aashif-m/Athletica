@@ -52,8 +52,7 @@
 
                     <!-- Details -->
                     <div class="grade-details">
-                        <p>Wrong Answers : <span id="wrong-answers"></span></p>
-                        <p>Right Answers : <span id="right-answers"></span></p>
+                        <p>Correct Answers : <span id="correct-answers"></span></p>
                         <p>Grade : <span id="grade-percentage"></span>%</p>
                         <p>You took <span id="time-display"></span> seconds to complete the quiz.</p>
                         <p><span id="remarks"></span></p>
@@ -73,8 +72,8 @@
 
                 <!-- Score and Question Number -->
                 <div class="game-details-container">
-                    <h1>Score : <span id="player-score"></span> / 10</h1> <!-- Score -->
-                    <h1>Question : <span id="question-number"></span> / 10</h1> <!-- Question Number -->
+                    <h1>Points : <span id="player-score"></span> / 10</h1> <!-- Points -->
+                    <h1>Question No : <span id="question-number"></span> / 10</h1> <!-- Question Number -->
                 </div>
 
                 <!-- Question -->
@@ -89,10 +88,10 @@
                     <div class="modal-container" id="option-modal"> 
 
                         <div class="modal-content-container">
-                            <h1>Please Pick An Option</h1> <!-- Message -->
+                            <h1>Select an Option</h1> <!-- Message -->
 
                             <div class="modal-button-container">
-                                <button onclick="AnswerModal()">Continue</button> <!-- Continue Button -->
+                                <button onclick="AnswerModal()">OK</button> <!-- Continue Button -->
                             </div>
 
                         </div>
@@ -102,25 +101,25 @@
                     <!-- Option 1 -->
                     <span>
                         <input type="radio" id="option-one" name="option" class="radio" value="optionA"> <!-- Radio Button 1 -->
-                        <label for="option-one" class="option" id="option-one-label"></label> <!-- Label -->
+                        <label for="option-one" class="option" id="option-A"></label> <!-- Label -->
                     </span>
 
                     <!-- Option 2 -->
                     <span>
                         <input type="radio" id="option-two" name="option" class="radio" value="optionB"> <!-- Radio Button 2 -->
-                        <label for="option-two" class="option" id="option-two-label"></label> <!-- Label -->
+                        <label for="option-two" class="option" id="option-B"></label> <!-- Label -->
                     </span>
 
                     <!-- Option 3 -->
                     <span>
                         <input type="radio" id="option-three" name="option" class="radio" value="optionC"> <!-- Radio Button 3 -->
-                        <label for="option-three" class="option" id="option-three-label"></label> <!-- Label -->
+                        <label for="option-three" class="option" id="option-C"></label> <!-- Label -->
                     </span>
 
                     <!-- Option 4 -->
                     <span>
                         <input type="radio" id="option-four" name="option" class="radio" value="optionD"> <!-- Radio Button 4 -->
-                        <label for="option-four" class="option" id="option-four-label"></label> <!-- Label -->
+                        <label for="option-four" class="option" id="option-D"></label> <!-- Label -->
                     </span>
 
                 </div>

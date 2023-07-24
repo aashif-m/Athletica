@@ -217,10 +217,10 @@ function NextQuestion(index) {
     document.getElementById("question-number").innerHTML = questionNumber //Displays the question number
     document.getElementById("player-score").innerHTML = playerScore //Displays the player score
     document.getElementById("display-question").innerHTML = currentQuestion.question; //Displays the question
-    document.getElementById("option-one-label").innerHTML = currentQuestion.optionA; //Displays the first option
-    document.getElementById("option-two-label").innerHTML = currentQuestion.optionB; //Displays the second option
-    document.getElementById("option-three-label").innerHTML = currentQuestion.optionC; //Displays the third option
-    document.getElementById("option-four-label").innerHTML = currentQuestion.optionD; //Displays the fourth option
+    document.getElementById("option-A").innerHTML = currentQuestion.optionA; //Displays the first option
+    document.getElementById("option-B").innerHTML = currentQuestion.optionB; //Displays the second option
+    document.getElementById("option-C").innerHTML = currentQuestion.optionC; //Displays the third option
+    document.getElementById("option-D").innerHTML = currentQuestion.optionD; //Displays the fourth option
 }
 
 //Function for timer countdown
@@ -347,8 +347,7 @@ function handleEndGame() {
     document.getElementById('remarks').innerHTML = remark
     document.getElementById('remarks').style.color = remarkColor
     document.getElementById('grade-percentage').innerHTML = playerGrade
-    document.getElementById('wrong-answers').innerHTML = wrongAttempt
-    document.getElementById('right-answers').innerHTML = playerScore
+    document.getElementById('correct-answers').innerHTML = playerScore
     document.getElementById('time-display').innerHTML = 120 - secondsLeft;
     document.getElementById('score-modal').style.display = "flex"
 
