@@ -76,7 +76,7 @@ body{
     transition: transform 0.3s ease-in-out;
 }
 .image-container p{
-    font-family: fantasy;
+    font-family: fantasy;                               /*container to print the images vertically*/
     font-size: 15px;
     margin-left: 170px;
 	margin-bottom: 10px;
@@ -97,7 +97,7 @@ body{
 .horizontalImg{
     display: flex;
     flex-wrap: nowrap;
-    justify-content: center;
+    justify-content: center;                /*wrapping it with flex-wrap and display flex to print horiztally*/
     margin: 30px;
 
 }
@@ -125,8 +125,8 @@ body{
 }
 #Border {
     position: absolute;   /*Positioning the Modal to be printed in the center*/
-    top:280px;
-    left: 500px;
+    top:230px;
+    left: 450px;
 }
 
 .Imgcontent{

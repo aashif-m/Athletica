@@ -208,7 +208,7 @@ function handleQuestions() {
     //function to shuffle and push 10 questions to shuffledQuestions array
     while (shuffledQuestions.length <= 9) {
         const random = questions[Math.floor(Math.random() * questions.length)]
-        if (!shuffledQuestions.includes(random)) {
+        if (!shuffledQuestions.includes(random)) { //Checks if the same question is there in the array already.
             shuffledQuestions.push(random)
         }
     }
@@ -222,6 +222,7 @@ let indexNumber = 0
 
 let secondsLeft = 120;
 
+//Function for timer countdown
 const timer = setInterval(function() {
   secondsLeft--;
   document.getElementById("time-display").textContent = secondsLeft;
