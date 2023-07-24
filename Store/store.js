@@ -2,37 +2,37 @@
 var products = [{
 		name: "Basket Ball",
 		price: 50,
-		image: "basketball.png",
+		image: "basketball.jpg",
 		quantity: 0
 	},
 	{
 		name: "Volley Ball",
 		price: 40,
-		image: "volleyball.png",
+		image: "volleyball.jpg",
 		quantity: 0
 	},
 	{
 		name: "Football",
 		price: 60,
-		image: "football.png",
+		image: "football.jpg",
 		quantity: 0
 	},
 	{
 		name: "Cricket Bat",
 		price: 60,
-		image: "bat.png",
+		image: "bat.jpg",
 		quantity: 0
 	},
 	{
 		name: "Badminton Racket",
 		price: 90,
-		image: "badminton.png",
+		image: "badminton.jpg",
 		quantity: 0
 	},
 	{
 		name: "Mouse Pad",
 		price: 30,
-		image: "mousepad.png",
+		image: "mousepad.jpg",
 		quantity: 0
 	}
 ];
