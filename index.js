@@ -20,7 +20,7 @@ function redirect() {
         redirectBtn.innerHTML = "Redirecting in " + count;
     } else {
         redirectBtn.innerHTML = "";
-        window.location.href = "Main Page/MainPage.html";
+        window.location.href = "MainPage/MainPage.html";
     }
     count--;
     setTimeout(redirect, 1000);

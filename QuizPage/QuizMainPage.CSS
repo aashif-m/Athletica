@@ -64,10 +64,10 @@ hr{
 }
    
   
-.start_btn a:focus {
+.start_btn :focus {
     outline: 0;
 }
 
-.start_btn :hover {
-    color: yellow; 
+.start_btn:hover {
+    background-color: yellow;
 }
