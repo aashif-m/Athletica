@@ -1,47 +1,70 @@
+/*imports 2 font families called Poppins and Audiowide from an external css file*/
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900");
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 
 
-*{
-	scroll-behavior:smooth;
-    margin: 0;
-    box-sizing: border-box;
-}
+    * {
+        /*  smoothly scroll to the target elements instead of jumping*/
+        scroll-behavior:smooth;
+        margin: 0;
+        /*width and height  include all content area, padding and border*/
+        box-sizing: border-box;
+    }
+
 
 body{
-    /* display: flex; */
+    /*to center horizontally within a flex box of row - flex direction */
     justify-content: center;
+    /* to center flex elements center vertically of row- flex direction */
     align-items: center;
     background-color: rgb(39, 39, 39);
-    /* padding: 100px; */
 }
 
 #bgvideo {
     position: absolute;
+    /* positions the right edge of the video element at the right edge of its containing block */
     right: 0;
+    /* positions the bottom edge of the video element at the bottom edge of its containing block */
     bottom: 0;
+    /*can have elemnts(elements with positive z-index) on this element*/
     z-index: -1;
-    
 }
 
+
+
+/* Media query for screens with an aspect ratio equal to or greater than 16:9 - screen width is larger than screen height */
 @media (min-aspect-ratio: 16/9){
+    /*selecting by id*/
     #bgvideo{
+        /* Set the video width to 100% of Screen's width */
         width: 100%;
+        /*height is adjusted proptionally without distorting its original aspect ratio*/
         height:auto;
     }
 }
 
+
+/* Media query for screens with an aspect ratio lesser than 16:9 - screen width is smaller than screen height */
 @media (max-aspect-ratio: 16/9){
+    /*selecting by id*/
     #bgvideo{
+        /* Set the video heigth to 100% of Screen's height */
         width: auto;
+        /*width is adjusted proptionally without distorting its original aspect ratio*/
         height:100%;
     }
 }
 
+
+
 .main-text{
+    /*creates a flex box */
+    /*can controll easily by flex properties - flex direction,justify-content,align-items*/
     display: flex;
+    /*to center horizontally within a flex box of row - flex direction */
     justify-content: center;
 }
+
 
 #MainText{
     font-family : "Audiowide";
@@ -50,42 +73,48 @@ body{
     padding-left: 100px;
     padding-right: 100px;
     padding-top: auto;
-    /* white-space: nowrap; */
     font-size: 90px;
     color: rgba(255, 255, 255, 0.884);   
     top: 25vh;
     text-align: center;
 }
 
+/* Aligning the text and explore button to the centre(900px from the bottom) */
 header{
     margin-bottom: 900px;
 }
 
-#explore-button {
-    font-family: "Poppins";
-    font-size: 20px;
-    font-weight: 600;
-    overflow: hidden;
-    text-shadow: 1px 1px 5px rgba(0,0,0,0.2);
-    display: block;
-    margin-left:auto;
-    margin-right: auto;
-    position: relative;
-    top: 40vh;
-    width: 175px;
-    height: 55px;
-    border: 3px solid rgb(255, 255, 255);
-    background: none;
-    color: white;
-    cursor: pointer;
-    border-radius: 40px;
-    box-shadow: 1px 1px 10px rgba(0,0,0,0.3);
-    transition: 0.3s ease;
-}
+    #explore-button {
+        font-family: "Poppins";
+        font-size: 20px;
+        font-weight: 600;
+        overflow: hidden;
+        /*horizontal offset, vertical offset, blur radius,
+        and color of the shadow*/
+        text-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+        /*full width with a line break*/
+        display: block;
+        margin-left:auto;
+        margin-right: auto;
+        position: relative;
+        top: 40vh;
+        width: 175px;
+        height: 55px;
+        border: 3px solid rgb(255, 255, 255);
+        background: none;
+        color: white;
+        cursor: pointer;
+        /*to add rounded corners */
+        border-radius: 40px;
+        box-shadow: 1px 1px 10px rgba(0,0,0,0.3);
+        /*transition when hovering over*/
+        transition: 0.3s ease;
+    }
 
 #explore-button:hover{
 	color:black;
 	background-color:white;
+    /*0-1 scaledown above 1- scale up*/
 	transform:scale(1.2);
 	transition:0.3s ease;
 }
@@ -93,9 +122,12 @@ header{
 .section-1{
     width: 700px;
     height: 400px;
+    /* no line break but can set width,height,padding and margin*/
     display: inline-block;
+    /*to add rounded corners */
     border-radius: 10px;
     padding: 15px 25px;
+    /*width and height  include all content area, padding and border */
     box-sizing: border-box;
     cursor: pointer;
     margin: 10px 15px;
@@ -114,12 +146,12 @@ header{
 
 .flex{
     margin-top: 100px;
+    /*can controll easily by flex properties - flex direction,justify-content,align-items*/
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
     padding-bottom: 100px;
-
 }
 
 .text2{
@@ -128,7 +160,6 @@ header{
     padding-left: 100px;
     padding-right: 100px;
     padding-top: auto;
-    white-space: nowrap;
     font-size: 75px;
     color: rgba(255, 255, 255, 0.884);   
     top: 25vh;
@@ -155,7 +186,6 @@ header{
     justify-content: center;
     gap: 1rem;
     display: none;
-    
 }
   
   .btn {
@@ -168,17 +198,18 @@ header{
     color: black;
     border-color: rgb(163, 163, 163);
     border: rgb(53, 53, 53) 0.1rem solid;
-  }
+}
   
   .btn:hover {
     cursor: pointer;
     background: rgb(53, 53, 53);
     color: white;
     transform: scale(1.1);
-  }
+}
 
 .section-1:hover .btn-container{
     display: flex;
+    /*main axis is vertical*/
     flex-direction: column;
     align-items: center;
     justify-content: center;

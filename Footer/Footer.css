@@ -1,4 +1,9 @@
+
+/* "swap" tells the browser to use a font while the "Nunito"  is being downloaded, and then swap it when it's available.*/
+/*0,200 means available  italicities and the font weights*/
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+
+
 
 
 *{
@@ -23,7 +28,6 @@ footer{
     justify-content: space-between;
     max-width: 1700px;
     margin: auto;
-    /* margin-top: 100px; */
 }
 
 .box_footer{

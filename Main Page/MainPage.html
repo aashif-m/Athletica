@@ -2,45 +2,53 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+
         <!-- instruct internet explorer to use highest available document mode -->
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
         <!-- to adjust with different devices -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
         <title>ATLETICA</title>
 
-        <!--Linking the page icon-->
+        <!--for the page icon-->
         <link rel="icon" href="logo white blue.png">
 
-        <!-- Linking the navigation bar stylesheet -->
+        <!-- for the navigation bar stylesheet -->
         <link rel="stylesheet" type="text/css" href="../Navigation Bar/navbar.css">
 
-        <!-- Linking the home page stylesheet -->
+        <!-- for the home page stylesheet -->
         <link rel="stylesheet" type="text/css" href="MainPage.css">
 
-        <!-- Linking the home page javascript -->
-        <script defer src="Main.js"></script>
-
-        <!-- Linking the background video -->
-        <video id="bgvideo" autoplay muted loop >
-            <source src="introvedio.mp4">
-        </video>
-        <!--Linking with footer stylesheet-->
+        <!--for the footer stylesheet-->
         <link rel="stylesheet"  href="../Footer/Footer.css">
 
-        <!--Linking with footer icons-->
+
+        <!-- for the home page javascript -->
+        <!-- defer attribute will ensure that js wont affect(stop) the rendering or process displaying in  order  of an html dovcument -->
+        <script defer src="Main.js"></script>
+
+
+        <!--for the  footer icons-->
+        <!-- should be in head or start of the body to make available the icons -->
         <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
         
     </head>
-    <body>
-        <!-- back to top button -->
-        <!-- <a type="button" href="#top" id="back-to-top-btn" title="Go to top">^</a> -->
 
-        <!-- All navigation bar contents -->
+
+    <body>
+        <!-- for the background video -->
+        <video id="bgvideo" autoplay muted loop >
+            <source src="introvedio.mp4">
+        </video>
+
+        <!-- navigation bar contents starts here -->
         <nav id="top" class="top">
+            <!-- a click on the logo will direct ot the main page as it is enclosed within an anchor tag -->
             <a href="../Main Page/MainPage.html">
             <img class= "logo" src="../Navigation Bar/logo white blue.png" alt="ATLETICA logo">
             </a>
-            <!--menu items-->          
+            <!--menu items with their links-->          
             <ul>
                 <li><a href="../Main Page/MainPage.html" class="selected">HOME</a></li>
                 <li><a href="../Store/Store.html">Products</a></li>
@@ -51,8 +59,10 @@
                 <li><a href="../Student Details/StudentDetailsPage.html">ABOUT US</a></li>
             </ul>
         </nav>
-
         <!--End of all navigation bar contents-->
+
+
+        <!-- This header section will display on top of the vedio -->
         <header>
             <div class="main-text">
                 <h1 id="MainText">GO FOR THE GOAL</h1>
@@ -61,9 +71,13 @@
                 <input type="button" id="explore-button" value="Explore!">
             </div>
         </header>  
+
+
         <h2 class="text2">Top Sports</h2>  
-            <div class="flex">
+         <div class="flex">
             <!--home page sections-->
+
+            <!-- Student o1 section -->
             <section class="section-1 student1">
                 <div class="categories-title">
                     <h1>CRICKET</h1>
@@ -73,8 +87,9 @@
                         </button>
                     </div>
                 </div>
-                
             </section>
+
+            <!-- Student o2 section -->
             <section class="section-1 student2">
                 <div class="categories-title">
                     <h1>VOLLEYBALL</h1>
@@ -84,8 +99,9 @@
                         </button>
                     </div>
                 </div>
-                
             </section>
+
+            <!-- Student o3 section -->
             <section class="section-1 student3">
                 <div class="categories-title">
                     <h1>FOOTBALL</h1>
@@ -97,6 +113,7 @@
                 </div>
             </section>
 
+            <!-- Student o3 section -->
             <section class="section-1 student4">
                 <div class="categories-title">
                     <h1>E-SPORTS</h1>
@@ -107,26 +124,29 @@
                     </div>
                 </div>
             </section>
-
-
-
-            </div>
+        </div>
             <button id="back-to-top-btn">Back TO TOP<span></span></button>
-        <!-- end category section -->
+        <!-- end of the home page sections -->
 
 
-        <!-- ------------------------------------------------website footer----------------------------------------------- -->
+        <!-- Footer of the Website -->
         <footer>
 
             <div class="container_footer">
+
                 <div class="box_footer">
+                    <!-- logo -->
                     <div class="logo">
                         <img src="../Footer/logo white blue.png" alt="">
                     </div>
+
+                    <!-- description -->
                     <div class="terms">
                         <p>Athletica is your go-to destination for the latest updates, scores, news, and insights from the thrilling world of sports. Whether you're a fan, athlete, or just love the game, we've got you covered. Stay connected and join the sports community today!</p>
                     </div>
                 </div>
+
+                <!-- Quick links to the other pages -->
                 <div class="box_footer">
                     <h2>Quick Links</h2>
                     <a href="../Main Page/MainPage.html">Home Page</a>
@@ -138,6 +158,7 @@
                     <a href="../Student Details/StudentDetailsPage.html">About Us</a>
                 </div>
     
+                <!-- Team memebers with links to their page editors -->
                 <div class="box_footer">
                     <h2>The Team</h2>
                     <a href="../Page Editors/HTML/Aashif.html">Mohamed Aashif</a>
@@ -146,6 +167,7 @@
                     <a href="../Page Editors/HTML/Chenuka.html">Chenuka Sarathchandra</a>              
                 </div>
     
+                <!-- links to social medi accounts -->
                 <div class="box_footer">
                     <h2>Contact Us</h2>
                     <a href="https://www.Facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i> Facebook</a>
@@ -153,15 +175,17 @@
                     <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i> Linkedin</a>
                     <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram-square"></i> Instagram</a>
                 </div>
-    
+
             </div>
     
             <div class="box_copyright">
                 <hr>
                 <p>All rights reserved © 2023 <b>Athletica</b> | Site created by: 
+                <!-- page editor name and the link -->
                 <a href="../Page Editors/HTML/Ishrath.html" style="text-decoration: none; color: aliceblue;">Muhammad Ishrath</a></p>
             </div>
-    
+
         </footer>
+        <!-- end of the footer -->
     </body>
 </html>

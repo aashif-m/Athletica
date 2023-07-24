@@ -1,9 +1,15 @@
+
+/*imports a font family called Audiowide from an external css file*/
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+
+
 *{
 	padding:0;
 	margin:0;
 	text-decoration:none;
 	list-style:none;
+	/*width and height  include all content area, padding and border*/
 	box-sizing:border-box;
 	
 }
@@ -15,6 +21,8 @@
 
 
 nav{
+	/*creates a flex box */
+    /*can controll easily by flex properties - flex direction,justify-content,align-items*/
 	display: flex;
 	position: sticky;
 	background-color: rgba(0,0,0,0.5);
@@ -22,20 +30,27 @@ nav{
 	width:100%;
 	overflow: hidden;
 	font-family: 'Audiowide', cursive;
-	position: sticky; /* Set the navbar sticky */
-    top: 0; /* Ensure the navbar sticks to the top of the viewport */
+	/* Set the navbar sticky */
+	position: sticky; 
+	/* Ensure the navbar sticks to the top of the viewport */
+    top: 0; 
+	/*will appear on top of other elements with lower z-index */
     z-index: 999;
 	
 }
-.logo{
-	line-height:80px;
-	padding:0 auto;
-	width:75px;
- 	padding: 10px;
-	margin-left: 20px;
-	padding-bottom: 5px;
-	margin-top: 10px;
-}
+
+
+	.logo{
+		line-height:80px;
+		padding:0 auto;
+		width:75px;
+		padding: 10px;
+		margin-left: 20px;
+		padding-bottom: 5px;
+		margin-top: 10px;
+	}
+
+
 
 nav ul{
 	position: relative;
@@ -43,11 +58,11 @@ nav ul{
 	margin-right:10px;
 	margin-left: auto;
 	float: right;
-	/* left: 929.5px;
-	bottom: 73px; */
+
 }
 
 nav ul li{
+	/* no line break but can set width,height,padding and margin*/
 	display:inline-block;
 	line-height:80px;
 	margin:0 5px;
@@ -60,6 +75,7 @@ nav ul li a{
 	padding:10px 20px;
 	border-radius:40px;
 	font-weight:520;
+	/* text are converted to upper case*/
 	text-transform:uppercase;
 	transition: 1s;
 }
